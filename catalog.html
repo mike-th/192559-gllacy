@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>GllacyShop</title>
+</head>
+<body>
+	<!-- Шапка -->
+	<header class="main-header">
+		<div class="center">
+			<!-- Лого и главное меню -->
+			<a href="index.html"><img src="img/logo.png" alt="GllacyShop" width="100" height="35"></a>
+			<nav class="main-navigation">
+				<ul>
+					<li>
+						<a href="#">Каталог</a>
+						<ul>
+							<li><a href="#">Новинки</a></li>
+							<li><a href="#">Сливочное</a></li>
+							<li><a href="#">Щербеты</a></li>
+							<li><a href="#">Фруктовый лед</a></li>
+							<li><a href="#">Мелорин</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Доставка и оплата</a>
+					</li>
+					<li>
+						<a href="#">О компании</a>
+					</li>
+				</ul>
+			</nav>
+			<!-- Личный кабинет -->
+			<div class="user-block">
+				<a class="search" href="#">Что ищем?</a>
+				<a class="login" href="#">Вход</a>
+				<a class="basket" href="#">2 товара</a>
+			</div>
+			<!-- Телефон магазина -->
+			<div class="main-phone">
+				<p>С 10 до 20, ежедневно<br>
+				<strong>8 812 450-25-25</strong></p>
+			</div>
+		</div>
+	</header>
+	<!-- Основное содержание -->
+	<main class="center">
+		<!-- Хлебные крошки и заголовок-->
+		<header class="content-header">
+			<div class="breadcrumbs">
+				<a href="index.html">Главная</a>
+				<a href="#">Каталог</a>
+				<a href="#">Сливочное</a>
+			</div>
+			<h1 class="content-title">Сливочное мороженое </h1>
+		</header>
+		<!-- Фильтры и список товара -->
+		<section class="content">
+			<!-- Фильтры -->
+			<section class="content-filter">
+				<form action="#" method="get">
+					<!-- Сортировка -->
+					<fieldset class="content-filter-sorting">
+						<legend>Сортировка:</legend>
+						<select name="sorting">
+							<option value="popular">по популярности</option>
+							<option value="cheap">сначала недорогие</option>
+							<option value="expensive">сначала дорогие</option>
+							<option value="fat">по жирности</option>
+						</select>
+					</fieldset>
+					<!-- Цена -->
+					<fieldset class="content-filter-price">
+						<legend>Цена: 100 руб. – 500 руб.</legend>
+						<!-- Ползунок (сделать) -->
+					</fieldset>
+					<!-- Жирность -->
+					<fieldset class="content-filter-fat">
+						<legend>Жирность:</legend>
+
+						<input type="radio" name="filter-fat" value="percent-0" id="percent-0">
+						<label for="percent-0">0%</label>
+
+						<input type="radio" name="filter-fat" value="percent-to-10" id="percent-to-10" checked>
+						<label for="percent-to-10">до 10%</label>
+
+						<input type="radio" name="filter-fat" value="percent-to-30" id="percent-to-30">
+						<label for="percent-to-30">до 30%</label>
+
+						<input type="radio" name="filter-fat" value="percent-more-30" id="percent-more-30">
+						<label for="percent-more-30">выше 30%</label>
+
+					</fieldset>
+					<!-- Наполнители -->
+					<fieldset class="content-filter-filler">
+						<legend>Наполнители:</legend>
+
+						<input type="checkbox" name="chocolate" id="chocolate" checked>
+						<label for="chocolate">шоколадные</label>
+
+						<input type="checkbox" name="sugar" id="sugar" checked>
+						<label for="sugar">сахарные присыпки</label>
+
+						<input type="checkbox" name="fruit" id="fruit">
+						<label for="fruit">фрукты</label>
+
+						<input type="checkbox" name="syrup" id="syrup">
+						<label for="syrup">сиропы</label>
+
+						<input type="checkbox" name="jam" id="jam">
+						<label for="jam">джемы</label>
+
+					</fieldset>
+					<button class="content-filter-btn" type="submit">Применить</button>
+				</form>
+			</section>
+			<!-- Каталог -->
+			<section class="catalog">
+				<!-- Позиции товара -->
+				<div class="catalog-list">
+					<!-- Одна позиция товара (не стал размножать их до проверки) -->
+					<article class="product">
+						<div class="product-image">
+							<a href="#"><img src="img/img.png" width="150" height="150" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></a>
+							<div class="product-label-price">
+								<p>310/кг</p>
+							</div>
+						</div>
+						<div class="product-name">
+							<h2 class="hit-title"><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h2>
+						</div>
+					</article>
+
+				</div>
+				<!-- Страницы каталога -->
+				<div class="pagination">
+					<a href="#"><img src="img/img.png" alt="Предыдущая страница" width="10" height="10"></a>
+					<a href="#">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#"><img src="img/img.png" alt="Следующая страница" width="10" height="10"></a>
+				</div>
+			</section>
+		</section>
+	</main>
+	<!-- Подвал -->
+	<footer class="main-footer">
+		<div class="center">
+			<!-- Социальные сети -->
+			<div class="footer-social">
+				<a class="social-btn social-btn-tw" href="#">Twitter</a>
+				<a class="social-btn social-btn-inst" href="#">Instagram</a>
+				<a class="social-btn social-btn-fb" href="#">Facebook</a>
+				<a class="social-btn social-btn-vk" href="#">Вконтакте</a>
+			</div>
+			<!-- Меню подвала -->
+			<div class="footer-navigation">
+				<div class="footer-navigation-left">
+					<img src="img/footer/img.png" alt="">
+					<a class="footer-navigation-ref" href="#">Для поставщиков</a>
+					<a class="footer-navigation-ref" href="#">О производстве</a>
+				</div>
+				<div class="footer-navigation-right">
+					<a class="footer-navigation-ref" href="#">Наши документы</a>
+					<a class="footer-navigation-ref" href="#">Экологические стандарты</a>
+				</div>
+			</div>
+			<!-- Копирайт -->
+			<div class="footer-copyright">
+				<a href="#"><img src="img/footer/img.png" alt="HTML Academy" width="100" height="30">HTML Academy</a>
+				<p>Сделано в <a class="footer-copyright-ref" href="#">HTML Academy</a> © 2016</p>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
