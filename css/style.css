@@ -1,0 +1,36 @@
+body {
+	font-size: 16px;
+	line-height: 22px;
+	color: #ffffff;
+	font-weight: normal;
+	font-family: "Arial", sans-serif;
+	/* Подключил фон для отображения иконок */
+	background-color: #849d8f;
+}
+
+h1 {
+	font-size: 35px;
+	line-height: 41px;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+h1.info-title {
+	font-size: 24px;
+	line-height: 30px;
+	color: #323232;
+}
+
+h2 {
+	font-size: 16px;
+	line-height: 22px;
+	color: #ffffff;
+	font-weight: normal;
+}
+
+h2.action-title {
+	font-size: 35px;
+	line-height: 41px;
+	color: #ffffff;
+	font-weight: bold;
+}
