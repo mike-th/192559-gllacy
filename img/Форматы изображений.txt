@@ -1,0 +1,10 @@
+PNG-24:
+hit
+basket-ice-cream-orange
+basket-ice-cream-strawberry-white-chocolate
+post-card
+slider-ice-cream-1
+slider-ice-cream-2
+slider-ice-cream-3
+
+Остальные *.png в PNG-8.
