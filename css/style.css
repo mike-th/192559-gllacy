@@ -1,18 +1,12 @@
 body {
+	min-width: 1200px;
 	font-size: 16px;
 	line-height: 22px;
 	color: #ffffff;
 	font-weight: normal;
-	font-family: "Arial", "Helvetica", sans-serif;
-	/* Подключил фон для отображения иконок */
+	font-family: "Roboto", "Arial", "Helvetica", sans-serif;
+	/* Фон для отображения иконок */
 	background-color: #849d8f;
-}
-
-h1 {
-	font-size: 35px;
-	line-height: 41px;
-	color: #ffffff;
-	font-weight: bold;
 }
 
 h1.info-title {
@@ -22,11 +16,11 @@ h1.info-title {
 	font-weight: 500;
 }
 
-h2 {
-	font-size: 16px;
-	line-height: 22px;
+h1.content-title {
+	font-size: 35px;
+	line-height: 41px;
 	color: #ffffff;
-	font-weight: 500;
+	font-weight: bold;
 }
 
 h2.action-title {
@@ -34,4 +28,229 @@ h2.action-title {
 	line-height: 41px;
 	color: #ffffff;
 	font-weight: bold;
+}
+
+h2.product-title {
+	font-size: 16px;
+	line-height: 22px;
+	color: #ffffff;
+	font-weight: 500;
+}
+
+h2.news-left-title {
+	font-size: 16px;
+	line-height: 22px;
+	color: #323232;
+	font-weight: 500;
+}
+
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.main-header {
+	margin-bottom: 527px;
+	/* Фон для сетки */
+	background-color: #2e8100;
+}
+
+.center {
+	width: 1146px;
+	margin: 0 auto;
+	padding: 0 27px;
+	/* Фон для сетки */
+	background-color: #db7093;
+}
+
+.main-logo {
+	width: 153px;
+	height: 63px;
+	float: left;
+}
+
+.main-navigation {
+	width: 700px;
+	min-height: 120px;
+	float: left;
+	/* Фон для сетки */
+	background-color: #b0e0e6;
+}
+
+.main-right-block {
+	width: 267px;
+	min-height: 120px;
+	float: right;
+	/* Фон для сетки */
+	background-color: #708090;
+}
+
+.action {
+	margin-bottom: 40px;
+}
+
+.action-left {
+	width: 560px;
+	min-height: 229px;
+	float: left;
+	/* Фон для сетки */
+	background-color: #75061e;
+}
+
+.action-right {
+	width: 560px;
+	min-height: 229px;
+	float: right;
+	/* Фон для сетки */
+	background-color: #3a1808;
+}
+
+.hit {
+	margin-bottom: 40px;
+}
+
+.product {
+	width: 267px;
+	min-height: 322pxx;
+	float: left;
+	margin-right: 26px;
+	/* Фон для сетки */
+	background-color: #20b2aa;
+}
+
+.product:last-child {
+	margin-right: 0px;
+}
+
+.info {
+	min-height: 306px;
+	margin-bottom: 40px;
+	/* Фон для сетки */
+	background-color: #daa520;
+}
+
+.info-table-single {
+	width: 547px;
+	float: left;
+	margin-right: 26px;
+	/* Фон для сетки */
+	background-color: #eabb60;
+}
+
+.info-table-single:nth-child(even) {
+	margin-right: 0px;
+}
+
+.info-table-single:nth-child(odd) {
+	margin-left: 13px;
+}
+
+.news {
+	margin-bottom: 40px;
+}
+
+.news-left {
+	width: 560px;
+	min-height: 220px;
+	float: left;
+	/* Фон для сетки */
+	background-color: #ffffff;
+}
+
+.news-right {
+	width: 560px;
+	min-height: 220px;
+	float: right;
+	/* Фон для сетки */
+	background-color: #92cdff;
+}
+
+.map {
+	width: 302px;
+	height: 304px;
+	margin: 0 auto;
+	padding-top: 62px;
+	padding-right: 27px;
+	padding-bottom: 62px;
+	padding-left: 871px;
+	/* Фон для сетки */
+	background-image: url("../img/map.png");
+}
+
+.map-right {
+	width: 302px;
+	min-height: 305px;
+	border: 1px solid white;
+	/* Фон для сетки */
+	background-color: #e94e37;
+}
+
+.main-footer {
+	padding-top: 20px;
+	padding-bottom: 29px;
+	/* Фон для сетки */
+	background-color: #2e8100;
+}
+
+.footer-social {
+	width: 267px;
+	float: left;
+	margin-right: 26px;
+	/* Фон для сетки */
+	background-color: #20b2aa;
+}
+
+.footer-navigation {
+	width: 560px;
+	float: left;
+	margin-right: 26px;
+	/* Фон для сетки */
+	background-color: #20b2aa;
+}
+
+.footer-copyright {
+	width: 267px;
+	float: right;
+	margin-right: 0px;
+	/* Фон для сетки */
+	background-color: #20b2aa;
+}
+
+/* Стили для catalog.html */
+
+.content-filter {
+	margin-bottom: 40px;
+}
+
+.catalog-list {
+	font-size: 0px;
+}
+
+.product-wrap {
+	display: inline-block;
+	width: 267px;
+	min-height: 322pxx;
+	margin-right: 26px;
+	margin-bottom: 40px;
+	vertical-align: top;
+	font-size: 16px;
+	/* Фон для сетки */
+	background-color: #20b2aa;
+}
+
+.product-wrap:nth-child(4n) {
+	margin-right: 0px;
+}
+
+.product-wrap:nth-child(n+9) {
+	margin-bottom: 82px;
+}
+
+.pagination {
+	width: 190px;
+	margin-bottom: 30px;
+	float: right;
+	/* Фон для сетки */
+	background-color: #849d8f;
 }
