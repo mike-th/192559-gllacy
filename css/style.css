@@ -5,7 +5,6 @@ body {
 	color: #ffffff;
 	font-weight: normal;
 	font-family: "Roboto", "Arial", "Helvetica", sans-serif;
-	/* Фон для отображения иконок */
 	background-color: #849d8f;
 }
 
@@ -51,7 +50,7 @@ h2.news-left-title {
 }
 
 .main-header {
-	margin-bottom: 527px;
+	margin-bottom: 40px;
 	/* Фон для сетки */
 	background-color: #2e8100;
 }
@@ -78,6 +77,26 @@ h2.news-left-title {
 	background-color: #b0e0e6;
 }
 
+/* Задание #5*/
+.main-navigation a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.main-navigation ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 0px;
+}
+
+.main-navigation li {
+	display: inline-block;
+	font-size: 16px;
+	vertical-align: top;
+	border: 1px solid black;
+}
+
 .main-right-block {
 	width: 267px;
 	min-height: 120px;
@@ -92,7 +111,6 @@ h2.news-left-title {
 
 .action-left {
 	width: 560px;
-	min-height: 229px;
 	float: left;
 	/* Фон для сетки */
 	background-color: #75061e;
@@ -100,10 +118,13 @@ h2.news-left-title {
 
 .action-right {
 	width: 560px;
-	min-height: 229px;
 	float: right;
 	/* Фон для сетки */
 	background-color: #3a1808;
+}
+
+.action p {
+	min-height: 66px;
 }
 
 .hit {
@@ -112,7 +133,7 @@ h2.news-left-title {
 
 .product {
 	width: 267px;
-	min-height: 322pxx;
+	min-height: 322px;
 	float: left;
 	margin-right: 26px;
 	/* Фон для сетки */
@@ -121,6 +142,10 @@ h2.news-left-title {
 
 .product:last-child {
 	margin-right: 0px;
+}
+
+.product-image a {
+	display: block;
 }
 
 .info {
@@ -189,35 +214,42 @@ h2.news-left-title {
 .main-footer {
 	padding-top: 20px;
 	padding-bottom: 29px;
+	font-size: 0;
 	/* Фон для сетки */
 	background-color: #2e8100;
 }
 
 .footer-social {
+	display: inline-block;
 	width: 267px;
-	float: left;
+	vertical-align: middle;
 	margin-right: 26px;
+	font-size: 18px;
 	/* Фон для сетки */
 	background-color: #20b2aa;
 }
 
 .footer-navigation {
+	display: inline-block;
 	width: 560px;
-	float: left;
+	vertical-align: middle;
 	margin-right: 26px;
+	font-size: 18px;
 	/* Фон для сетки */
 	background-color: #20b2aa;
 }
 
 .footer-copyright {
+	display: inline-block;
 	width: 267px;
-	float: right;
+	vertical-align: middle;
 	margin-right: 0px;
+	font-size: 18px;
 	/* Фон для сетки */
 	background-color: #20b2aa;
 }
 
-/* Стили для catalog.html */
+/* Стили только для catalog.html */
 
 .content-filter {
 	margin-bottom: 40px;
@@ -243,14 +275,10 @@ h2.news-left-title {
 	margin-right: 0px;
 }
 
-.product-wrap:nth-child(n+9) {
-	margin-bottom: 82px;
-}
-
 .pagination {
-	width: 190px;
+	margin-top: 82px;
 	margin-bottom: 30px;
-	float: right;
+	text-align: right;
 	/* Фон для сетки */
 	background-color: #849d8f;
 }
