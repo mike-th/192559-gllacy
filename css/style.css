@@ -8,39 +8,11 @@ body {
 	background-color: #849d8f;
 }
 
-h1.info-title {
-	font-size: 24px;
-	line-height: 30px;
-	color: #323232;
-	font-weight: 500;
-}
-
 h1.content-title {
 	font-size: 35px;
 	line-height: 41px;
 	color: #ffffff;
 	font-weight: bold;
-}
-
-h2.action-title {
-	font-size: 35px;
-	line-height: 41px;
-	color: #ffffff;
-	font-weight: bold;
-}
-
-h2.product-title {
-	font-size: 16px;
-	line-height: 22px;
-	color: #ffffff;
-	font-weight: 500;
-}
-
-h2.news-left-title {
-	font-size: 16px;
-	line-height: 22px;
-	color: #323232;
-	font-weight: 500;
 }
 
 .clearfix::after {
@@ -49,8 +21,33 @@ h2.news-left-title {
 	clear: both;
 }
 
+.btn {
+	display: inline-block;
+	padding: 10px 24px;
+	font-family: "Roboto", "Arial", "Helvetica", sans-serif;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 24px;
+	color: #ffffff;
+	background: #ef6441;
+	border: none;
+	border-radius: 46px;
+	outline: none;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.feedback-btn {
+	display: block;
+}
+
+/* Шапка */
+
 .main-header {
 	margin-bottom: 40px;
+	color: #ffffff;
 	/* Фон для сетки */
 	background-color: #2e8100;
 }
@@ -63,197 +60,442 @@ h2.news-left-title {
 	background-color: #db7093;
 }
 
+/* Шапка - Лого */
+
 .main-logo {
+	margin-top: 10px;
+	margin-left: -5px;
 	width: 153px;
 	height: 63px;
 	float: left;
 }
 
 .main-navigation {
+	margin-top: 23px;
 	width: 700px;
-	min-height: 120px;
 	float: left;
 	/* Фон для сетки */
 	background-color: #b0e0e6;
 }
 
-/* Задание #5*/
-.main-navigation a {
-	color: #ffffff;
-	text-decoration: none;
-}
+/* Шапка - Меню */
 
-.main-navigation ul {
+.main-navigation-menu {
+	position: relative;
 	margin: 0;
 	padding: 0;
+	padding-left: 15px;
 	list-style: none;
 	font-size: 0px;
 }
 
-.main-navigation li {
+.main-navigation-menu > li {
 	display: inline-block;
-	font-size: 16px;
 	vertical-align: top;
-	border: 1px solid black;
+	line-height: 18px;
+	white-space: nowrap;
 }
 
+.main-navigation-menu > li > a {
+	display: block;
+	padding: 7px 14px;
+	color: #ffffff;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.main-navigation-menu > li > a:hover {
+	color: #333333;
+	text-decoration: none;
+	background-color: #f7f6f3;
+	border-radius: 32px;
+}
+
+.main-navigation-menu > li > a:active {
+	/* Сделать тень */
+}
+
+.main-navigation-menu > li.active > a {
+	color: #ffffff;
+	text-decoration: none;
+	background-color: #d07058;
+	border-radius: 32px;
+}
+
+.submenu-wrap {
+	margin: 0;
+	padding: 0;
+	padding-top: 5px;
+}
+
+.main-navigation-submenu {
+	display: none;
+	position: absolute;
+	top: 37px;
+	left: -7px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background-color: #f8f7f4;
+	border-radius: 5px;
+}
+
+.main-navigation-menu > li:hover .main-navigation-submenu {
+	display: block;
+}
+
+.main-navigation-submenu > li {
+	line-height: 16px;
+}
+
+.main-navigation-submenu > li > a {
+	display: block;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: normal;
+	color: #323232;
+	padding: 8px 20px;
+}
+
+.main-navigation-submenu > li:first-child > a {
+	font-weight: bold;
+	color: #323232;
+	border-bottom: 1px solid #323232;
+}
+
+/* Шапка - Меню - Субменю - Изменение фона кнопки при наведении */
+
+.main-navigation-submenu > li:hover {
+	background-color: #fbded7;
+}
+
+.main-navigation-submenu > li:first-child:hover {
+	background-color: #fbded7;
+	border-radius: 5px 5px 0 0;
+}
+
+.main-navigation-submenu > li:last-child:hover {
+	background-color: #fbded7;
+	border-radius: 0 0 5px 5px;
+}
+
+/* Шапка - Меню - Субменю - Изменение фона активной кнопки */
+
+.main-navigation-submenu > li > a:active {
+	background-color: #f6b5a5;
+}
+
+.main-navigation-submenu > li:first-child > a:active {
+	background-color: #f6b5a5;
+	border-radius: 5px 5px 0 0;
+}
+
+.main-navigation-submenu > li:last-child > a:active {
+	background-color: #f6b5a5;
+	border-radius: 0 0 5px 5px;
+}
+
+/* Шапка - Меню - Субменю - Изменение фона текущей кнопки */
+
+.main-navigation-submenu li.active > a {
+	color: #ffffff;
+	background-color: #d07058;
+}
+
+.main-navigation-submenu li.active:first-child > a {
+	color: #ffffff;
+	background-color: #d07058;
+	border-radius: 5px 5px 0 0;
+}
+
+.main-navigation-submenu li.active:last-child > a {
+	color: #ffffff;
+	background-color: #d07058;
+	border-radius: 0 0 5px 5px;
+}
+
+/* Шапка - Личный кабинет */
+
 .main-right-block {
-	width: 267px;
-	min-height: 120px;
+	margin: 0;
+	margin-top: 23px;
+	padding: 0;
+	max-width: 267px;
 	float: right;
+	text-align: right;
+	font-size: 0px;
 	/* Фон для сетки */
 	background-color: #708090;
 }
+
+/* Шапка - Личный кабинет - Поиск */
+
+.search-wrap {
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 16px;
+	margin-right: 10px;
+	text-align: left;
+	background-color: red;
+}
+
+a.search {
+	display: block;
+	width: 33px;
+	height: 33px;
+	font-size: 0;
+	color: #ffffff;
+	text-decoration: none;
+	background-color: #9db1a6;
+	border-radius: 16px;
+	transition: background-color 1.0s;
+}
+
+.search::before {
+	position: absolute;
+	content: "";
+	top: 8px;
+	left: 8px;
+	width: 17px;
+	height: 17px;
+	background: transparent url("../img/main-sprite.png") no-repeat -917px -5px;
+	transition: background-position 0.5s;
+}
+
+.search-appearance {
+	display: none;
+	position: absolute;
+	top: 37px;
+	right: 0;
+	width: 311px;
+	padding: 20px 15px;
+	background-color: #f8f7f4;
+	border-radius: 5px;
+}
+
+/* Шапка - Личный кабинет - Поиск - Изменение фона кнопки при наведении */
+
+.search-wrap:hover a.search {
+	color: #323232;
+	background-color: #f8f7f4;
+}
+
+.search-wrap:hover .search::before {
+	background: transparent url("../img/main-sprite.png") no-repeat -944px -5px;
+}
+
+.search-wrap:hover .search-appearance {
+	display: block;
+}
+
+/* Шапка - Личный кабинет - Вход */
+
+.login-wrap {
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 16px;
+	margin-right: 10px;
+	text-align: left;
+	background-color: red;
+}
+
+a.login {
+	display: block;
+	width: 48px;
+	height: 24px;
+	padding-top: 9px;
+	padding-left: 44px;
+	color: #ffffff;
+	text-decoration: none;
+	background-color: #9db1a6;
+	border-radius: 16px;
+	transition: background-color 1.0s;
+}
+
+.login::before {
+	position: absolute;
+	content: "";
+	top: 7px;
+	left: 16px;
+	width: 20px;
+	height: 19px;
+	background: transparent url("../img/main-sprite.png") no-repeat -635px -5px;
+	transition: background-position 0.5s;
+}
+
+.login-appearance {
+	display: none;
+	position: absolute;
+	top: 37px;
+	right: -1px;
+	width: 241px;
+	padding-top: 20px;
+	padding-top: 20px;
+	padding-left: 19px;
+	padding-right: 17px;
+	background-color: #f8f7f4;
+	border-radius: 6px;
+}
+
+/* Шапка - Личный кабинет - Вход - Изменение фона кнопки при наведении */
+
+.login-wrap:hover a.login {
+	color: #323232;
+	background-color: #f8f7f4;
+}
+
+.login-wrap:hover .login::before {
+	background: transparent url("../img/main-sprite.png") no-repeat -665px -5px;
+}
+
+.login-wrap:hover .login-appearance {
+	display: block;
+}
+
+/* Шапка - Личный кабинет - Корзина */
+
+.basket-wrap {
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 16px;
+	text-align: left;
+	background-color: red;
+}
+
+a.basket {
+	display: block;
+	width: 72px;
+	height: 24px;
+	padding-top: 9px;
+	padding-left: 45px;
+	color: #ffffff;
+	text-decoration: none;
+	background-color: #9db1a6;
+	border-radius: 16px;
+	transition: background-color 1.0s;
+}
+
+.basket::before {
+	position: absolute;
+	content: "";
+	top: 7px;
+	left: 16px;
+	width: 21px;
+	height: 20px;
+	background: transparent url("../img/main-sprite.png") no-repeat -5px -5px;
+}
+
+.basket-appearance {
+	display: none;
+	/*position: absolute;
+	top: 37px;
+	right: 0;
+	width: 311px;
+	padding: 20px 15px;
+	background-color: #f8f7f4;
+	border-radius: 5px;*/
+}
+
+/* Шапка - Личный кабинет - Вход - Изменение фона кнопки при наведении */
+
+.basket-wrap:hover a.basket {
+	color: #323232;
+	background-color: #f8f7f4;
+}
+
+.basket-wrap:hover .basket::before {
+	background: transparent url("../img/sprite/basket-hover.png") no-repeat;
+}
+
+.basket-wrap:hover .basket-appearance {
+	display: block;
+}
+
+/* Шапка - Телефон магазина */
+
+.main-phone {
+	display: inline-block;
+	vertical-align: top;
+	/*position: relative;*/
+}
+
+.main-phone-time {
+	margin: 0;
+	margin-top: 17px;
+	padding: 0;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 16px;
+	/* Фон для сетки */
+	background-color: green;
+}
+
+.main-phone-number {
+	margin: 0;
+	margin-top: 5px;
+	padding: 0;
+	font-size: 22px;
+	font-weight: 900;
+	line-height: 24px;
+	/* Фон для сетки */
+	background-color: orange;
+}
+
+/* Акции */
 
 .action {
 	margin-bottom: 40px;
 }
 
 .action-left {
-	width: 560px;
+	width: 520px;
 	float: left;
+	padding: 20px;
+	padding-top: 15px;
 	/* Фон для сетки */
-	background-color: #75061e;
+	background: #75061e url("../img/background-raspberry.png") no-repeat center center;
+	border-radius: 15px;
 }
 
 .action-right {
-	width: 560px;
+	width: 520px;
 	float: right;
+	padding: 20px;
+	padding-top: 15px;
 	/* Фон для сетки */
-	background-color: #3a1808;
+	background: #593727 url("../img/background-chocolate.png") no-repeat center center;
+	border-radius: 15px;
+}
+
+h2.action-title {
+	margin: 0;
+	margin-bottom: 15px;
+	font-size: 35px;
+	line-height: 41px;
+	color: #ffffff;
+	font-weight: bold;
 }
 
 .action p {
-	min-height: 66px;
-}
-
-.hit {
-	margin-bottom: 40px;
-}
-
-.product {
-	width: 267px;
-	min-height: 322px;
-	float: left;
-	margin-right: 26px;
-	/* Фон для сетки */
-	background-color: #20b2aa;
-}
-
-.product:last-child {
-	margin-right: 0px;
-}
-
-.product-image a {
-	display: block;
-}
-
-.info {
-	min-height: 306px;
-	margin-bottom: 40px;
-	/* Фон для сетки */
-	background-color: #daa520;
-}
-
-.info-table-single {
-	width: 547px;
-	float: left;
-	margin-right: 26px;
-	/* Фон для сетки */
-	background-color: #eabb60;
-}
-
-.info-table-single:nth-child(even) {
-	margin-right: 0px;
-}
-
-.info-table-single:nth-child(odd) {
-	margin-left: 13px;
-}
-
-.news {
-	margin-bottom: 40px;
-}
-
-.news-left {
-	width: 560px;
-	min-height: 220px;
-	float: left;
-	/* Фон для сетки */
-	background-color: #ffffff;
-}
-
-.news-right {
-	width: 560px;
-	min-height: 220px;
-	float: right;
-	/* Фон для сетки */
-	background-color: #92cdff;
-}
-
-.map {
-	width: 302px;
-	height: 304px;
-	margin: 0 auto;
-	padding-top: 62px;
-	padding-right: 27px;
-	padding-bottom: 62px;
-	padding-left: 871px;
-	/* Фон для сетки */
-	background-image: url("../img/map.png");
-}
-
-.map-right {
-	width: 302px;
-	min-height: 305px;
-	border: 1px solid white;
-	/* Фон для сетки */
-	background-color: #e94e37;
-}
-
-.main-footer {
-	padding-top: 20px;
-	padding-bottom: 29px;
-	font-size: 0;
-	/* Фон для сетки */
-	background-color: #2e8100;
-}
-
-.footer-social {
-	display: inline-block;
-	width: 267px;
-	vertical-align: middle;
-	margin-right: 26px;
+	margin: 0;
+	margin-bottom: 24px;
+	min-height: 71px;
 	font-size: 18px;
-	/* Фон для сетки */
-	background-color: #20b2aa;
+	font-weight: bold;
+	line-height: 22px;
+	color: #ffffff;
 }
 
-.footer-navigation {
-	display: inline-block;
-	width: 560px;
-	vertical-align: middle;
-	margin-right: 26px;
-	font-size: 18px;
-	/* Фон для сетки */
-	background-color: #20b2aa;
-}
-
-.footer-copyright {
-	display: inline-block;
-	width: 267px;
-	vertical-align: middle;
-	margin-right: 0px;
-	font-size: 18px;
-	/* Фон для сетки */
-	background-color: #20b2aa;
-}
-
-/* Стили только для catalog.html */
-
-.content-filter {
-	margin-bottom: 40px;
-}
+/* Популярные товары, Каталог */
 
 .catalog-list {
 	font-size: 0px;
@@ -261,8 +503,9 @@ h2.news-left-title {
 
 .product-wrap {
 	display: inline-block;
+	position: relative;
 	width: 267px;
-	min-height: 322pxx;
+	min-height: 322px;
 	margin-right: 26px;
 	margin-bottom: 40px;
 	vertical-align: top;
@@ -273,6 +516,413 @@ h2.news-left-title {
 
 .product-wrap:nth-child(4n) {
 	margin-right: 0px;
+}
+
+.product-image a {
+	display: inline-block;
+	vertical-align: middle;
+	overflow: hidden;
+	border-radius: 100px;
+	background: blue;
+}
+
+.product-image img {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.product-label-top {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 61px;
+	height: 61px;
+	font-size: 0px;
+	background: transparent url("../img/main-sprite.png") no-repeat -154px -5px;
+}
+
+.product-label-price {
+	position: absolute;
+	top: 210px;
+	left: 0;
+	margin: 0;
+	font-size: 45px;
+	font-weight: bold;
+	line-height: 45px;
+	color: #ffffff;
+}
+
+.product-label-weight {
+	padding-left: 35px;
+	font-size: 30px;
+	font-weight: bold;
+	line-height: 45px;
+	color: #ffffff;
+}
+
+.product-label-weight::before {
+	position: absolute;
+	content: "";
+	top: 6px;
+	right: 42px;
+	width: 31px;
+	height: 36px;
+	font-size: 0px;
+	background: transparent url("../img/main-sprite.png") no-repeat -876px -5px;
+}
+
+h2.product-title {
+	margin: 0;
+	margin-top: 14px;
+	margin-bottom: 9px;
+	font-size: 16px;
+	line-height: 22px;
+	color: #ffffff;
+	font-weight: 500;
+	text-align: center;
+}
+
+.product-title a {
+	color: #ffffff;
+}
+
+/* Описание магазина */
+
+.info {
+	margin-bottom: 40px;
+	padding: 20px;
+	padding-top: 25px;
+	background: #e9d9b6 url("../img/background-wafer.png");
+	border-radius: 15px;
+}
+
+.info-note {
+	position: relative;
+	width: 540px;
+	float: left;
+	margin-right: 26px;
+	margin-bottom: 22px;
+}
+
+.info-note:nth-child(even) {
+	margin-right: 0px;
+}
+
+.info-note:last-child,
+.info-note:nth-last-child(2) {
+	margin-bottom: 4px;
+}
+
+.info-icon {
+	position: absolute;
+	top: -12px;
+	left: 0px;
+	width: 48px;
+	height: 48px;
+	background: transparent url("../img/main-sprite.png") no-repeat;
+}
+
+.info-icon-icecream {
+	background-position: -401px -5px;
+}
+
+.info-icon-cow {
+	background-position: -343px -5px;
+}
+
+.info-icon-sheet {
+	background-position: -459px -5px;
+}
+
+.info-icon-thermometer {
+	background-position: -517px -5px;
+}
+
+h1.info-title {
+	margin: 0;
+	margin-bottom: 21px;
+	font-size: 24px;
+	line-height: 30px;
+	color: #323232;
+	font-weight: 500;
+}
+
+.info p {
+	margin: 0;
+	margin-left: 57px;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 22px;
+	color: #323232;
+}
+
+/* Новости */
+
+.news {
+	margin-bottom: 40px;
+}
+
+.news-left {
+	width: 520px;
+	padding: 20px;
+	padding-top: 23px;
+	/*min-height: 220px;*/
+	float: left;
+	background: #ffffff url("../img/background-strawberry.png") no-repeat center center;
+	border-radius: 15px;
+}
+
+h2.news-left-title {
+	margin: 0;
+	margin-bottom: 5px;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 22px;
+	color: #323232;
+}
+
+.news-left p {
+	margin: 0;
+	margin-right: 230px;
+	min-height: 150px;
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 30px;
+	color: #323232;
+}
+
+.news-left a {
+	color: #323232;
+}
+
+/* Подписка */
+
+.news-right-pattern {
+	width: 560px;
+	float: right;
+	/* Фон для сетки */
+	background: #92cdff url("../img/post-card.png");
+	border-radius: 15px;
+}
+
+.news-right {
+	margin: 5px;
+	margin-left: 6px;
+	padding: 20px;
+	padding-top: 29px;
+	background-color: #f8f7f4;
+	border-radius: 10px;
+}
+
+.news-right p {
+	margin: 0;
+	margin-bottom: 20px;
+	min-height: 97px;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 22px;
+	color: #5a5a5a;
+}
+
+/* Карта */
+
+.map {
+	padding-top: 62px;
+	padding-bottom: 62px;
+	/* Фон для сетки */
+	background: transparent url("../img/map.png") no-repeat center center;
+}
+
+.map-contact {
+	width: 252px;
+	min-height: 250px;
+	padding: 25px;
+	padding-top: 30px;
+	float: right;
+	background-color: #ffffff;
+	border-radius: 16px;
+}
+
+.map-contact p {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 18px;
+}
+
+.map-contact-short {
+	display: block;
+	margin-right: 75px;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 20px;
+	color: #323232;
+
+	background-color: #f8f7f4;
+}
+
+strong.map-contact-address {
+	display: block;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 24px;
+	color: #323232;
+}
+
+strong.map-contact-phone {
+	display: block;
+	margin-top: 5px;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 22px;
+	color: #323232;
+}
+
+span.map-contact-time {
+	display: block;
+	margin-bottom: 24px;
+	margin-right: 75px;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 22px;
+	color: #323232;
+}
+
+.feedback-appearance {
+	display: none;
+}
+
+/* Подвал */
+
+.main-footer {
+	padding-top: 20px;
+	padding-bottom: 29px;
+	font-size: 0;
+	/* Фон для сетки */
+	background-color: #2e8100;
+}
+
+/* Подвал - Социальные сети */
+
+.footer-social {
+	float: left;
+	width: 267px;
+	margin-right: 26px;
+	font-size: 18px;
+	/* Фон для сетки */
+	background-color: #20b2aa;
+}
+
+.social-btn {
+	float: left;
+	margin-right: 11px;
+	width: 32px;
+	height: 32px;
+	font-size: 0px;
+	border: #ffffff solid 3px;
+	border-radius: 32px;
+	background: transparent url("../img/main-sprite.png") no-repeat;
+}
+
+.social-btn-tw {
+	background-position: -971px -5px;
+}
+
+.social-btn-inst {
+	background-position: -575px -5px;
+}
+
+.social-btn-fb {
+	background-position: -87px -5px;
+}
+
+.social-btn-vk {
+	background-position: -1013px -5px;
+}
+
+/* Подвал - Меню подвала */
+
+.footer-navigation {
+	float: left;
+	width: 557px;
+	margin-right: 26px;
+	padding-left: 3px;
+	padding-top: 12px;
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 18px;
+	color: #ffffff;
+	/* Фон для сетки */
+	background-color: #20b2aa;
+}
+
+.footer-navigation a {
+	padding: 0px;
+	color: #ffffff;
+}
+
+a.footer-navigation-fav {
+	position: relative;
+	font-weight: bold;
+}
+
+.footer-navigation-fav::before {
+	position: absolute;
+	content: "";
+	top: 2px;
+	left: -22px;
+	width: 15px;
+	height: 13px;
+	background: transparent url("../img/main-sprite.png") no-repeat -129px -5px;
+}
+
+.footer-navigation-table {
+	display: table;
+	margin: 0 auto;
+}
+
+.footer-navigation-row {
+	display: table-row;
+	background: #849d8f;
+}
+
+.footer-navigation-cell {
+	display: table-cell;
+	padding: 2px 15px;
+}
+
+/* Подвал - Копирайт */
+
+.footer-copyright {
+	display: inline-block;
+	width: 267px;
+	vertical-align: middle;
+	margin-right: 0px;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 18px;
+	color: #fefefe;
+	/* Фон для сетки */
+	background-color: #20b2aa;
+}
+
+.footer-copyright p {
+	margin: 0;
+	text-align: right;
+}
+
+a.footer-copyright-ref {
+	color: #fefefe;
+}
+
+.footer-copyright img {
+	margin-left: 80px;
+	background-color: #849d8f;
+}
+
+/* Стили только для catalog.html */
+
+.content-filter {
+	margin-bottom: 40px;
 }
 
 .pagination {
