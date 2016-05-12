@@ -17,7 +17,7 @@
 			</div>
 			<nav class="main-navigation">
 				<ul class="main-navigation-menu">
-					<li class="main-navigation-catalog active">
+					<li class="main-navigation-item main-navigation-catalog active">
 						<a href="catalog.html">Каталог</a>
 						<div class="submenu-wrap">
 							<ul class="main-navigation-submenu">
@@ -29,10 +29,10 @@
 							</ul>
 						</div>
 					</li>
-					<li class="main-navigation-delivery">
+					<li class="main-navigation-item main-navigation-delivery">
 						<a href="#">Доставка и оплата</a>
 					</li>
-					<li class="main-navigation-about">
+					<li class="main-navigation-item main-navigation-about">
 						<a href="#">О Компании</a>
 					</li>
 				</ul>
@@ -42,7 +42,7 @@
 				<!-- Личный кабинет -->
 				<div class="user-block">
 					<div class="search-wrap">
-						<span class="search"><a href="#"><img src="img/search.svg" width="17" height="17" alt="Поиск">Поиск</a></span>
+						<a class="search" href="#" title="Поиск">Поиск</a>
 						<div class="search-appearance">
 							<form class="search-form" name="search-form" action="#" method="get">
 								<input class="search-request" type="search" name="search-request" placeholder="Что ищем?">
@@ -50,40 +50,42 @@
 						</div>
 					</div>
 					<div class="login-wrap">
-						<span class="login"><a href="#"><img src="img/login.svg" width="20" height="19" alt="Вход">Вход</a></span>
+						<a class="login" href="#" title="Вход">Вход</a>
 						<div class="login-appearance">
 							<form class="login-form" name="search-form" action="#" method="post">
 								<input class="login-email" type="email" name="login-email" placeholder="Электронная почта">
 								<input class="login-password" type="password" name="login-password" placeholder="Пароль">
 								<button class="btn" type="submit">Войти</button>
-								<span class="login-forget"><a href="#">Забыли пароль?</a></span>
-								<span class="login-new"><a href="#">Новая регистрация</a></span>
+								<div class="login-forget-new">
+									<a href="#">Забыли пароль?</a>
+									<a href="#">Новая регистрация</a>
+								</div>
 							</form>
 						</div>
 					</div>
 					<div class="basket-wrap">
-						<span class="basket"><a href="#"><img src="img/basket-full.svg" width="21" height="20" alt="Корзина">2 товара</a></span>
+						<a class="basket" href="#" title="Корзина">2 товара</a>
 						<div class="basket-appearance">
 							<div class="basket-list">
 								<table class="basket-table">
 									<tr>
-										<td><span class="basket-delete"><a href="#"><img src="img/delete.svg" width="11" height="11" alt="Удалить"></a></span></td>
-										<td><img src="img/basket-ice-cream-orange.png" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
+										<td class="basket-cell-delete"><button class="basket-delete" type="button" title="Удалить">Удалить</button></td>
+										<td class="basket-cell-image"><img src="img/basket-ice-cream-orange.png" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
 										<td>Пломбир с апельсиновым джемом</td>
 										<td>1,5 кг х <span class="basket-price">200 руб.</span></td>
 										<td>300 руб.</td>
 									</tr>
 									<tr>
-										<td><span class="basket-delete"><a href="#"><img src="img/delete.svg" width="11" height="11" alt="Удалить"></a></span></td>
+										<td><a class="basket-delete" href="#"><img src="img/delete.svg" width="11" height="11" alt="Удалить"></a></td>
 										<td><img src="img/basket-ice-cream-strawberry-white-chocolate.png" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
 										<td>Клубничный пломбир с присыпкой из белого шоколада</td>
 										<td>1,5 кг х <span class="basket-price">300 руб.</span></td>
 										<td>450 руб.</td>
 									</tr>
 								</table>
+								<p class="basket-result">Итого: 750 руб.</p>
+								<a class="btn" href="#">Оформить заказ</a>
 							</div>
-							<p class="basket-result">Итого: 750 руб.</p>
-							<a class="btn" href="#">Оформить заказ</a>
 						</div>
 					</div>
 				</div>
@@ -310,21 +312,35 @@
 		<div class="center">
 			<!-- Социальные сети -->
 			<div class="footer-social">
-				<a class="social-btn social-btn-tw" href="#"><img src="img/twitter.svg" width="31" height="31" alt="Twitter">Twitter</a>
-				<a class="social-btn social-btn-inst" href="#"><img src="img/instagram.svg" width="31" height="31" alt="Instagram">Instagram</a>
-				<a class="social-btn social-btn-fb" href="#"><img src="img/facebook.svg" width="31" height="31" alt="Facebook">Facebook</a>
-				<a class="social-btn social-btn-vk" href="#"><img src="img/vk.svg" width="31" height="31" alt="Вконтакте">Вконтакте</a>
+				<a class="social-btn social-btn-tw" href="#">Twitter</a>
+				<a class="social-btn social-btn-inst" href="#">Instagram</a>
+				<a class="social-btn social-btn-fb" href="#">Facebook</a>
+				<a class="social-btn social-btn-vk" href="#">Вконтакте</a>
 			</div>
 			<!-- Меню подвала -->
 			<div class="footer-navigation">
-				<a class="footer-navigation-ref footer-navigation-fav" href="#"><img src="img/heart.svg" width="15" height="13" alt="">Для поставщиков</a>
-				<a class="footer-navigation-ref" href="#">О производстве</a>
-				<a class="footer-navigation-ref" href="#">Наши документы</a>
-				<a class="footer-navigation-ref" href="#">Экологические стандарты</a>
+				<div class="footer-navigation-table">
+					<div class="footer-navigation-row">
+						<div class="footer-navigation-cell">
+							<a class="footer-navigation-fav" href="#">Для поставщиков</a>
+						</div>
+						<div class="footer-navigation-cell">
+							<a href="#">Наши документы</a>
+						</div>
+					</div>
+					<div class="footer-navigation-row">
+						<div class="footer-navigation-cell">
+							<a href="#">О производстве</a>
+						</div>
+						<div class="footer-navigation-cell">
+							<a href="#">Экологические стандарты</a>
+						</div>
+					</div>
+				</div>
 			</div>
 			<!-- Копирайт -->
 			<div class="footer-copyright">
-				<a href="#"><img src="img/html-academy.svg" width="108" height="37" alt="HTML Academy">HTML Academy</a>
+				<a href="#"><img src="img/html-academy.svg" width="108" height="37" alt="HTML Academy"></a>
 				<p>Сделано в <a class="footer-copyright-ref" href="#">HTML Academy</a> © 2016</p>
 			</div>
 		</div>

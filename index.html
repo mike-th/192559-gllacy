@@ -8,6 +8,14 @@
 	<link href="css/style.css" rel="stylesheet">
 </head>
 <body>
+<!-- Переключатели для слайдера -->
+<input type="radio" id="btn-1" name="toggle" checked>
+<input type="radio" id="btn-2" name="toggle">
+<input type="radio" id="btn-3" name="toggle">
+<!-- Глобальная обёртка -->
+<div class="site-wrapper">
+<!-- Обёртка контента -->
+<div class="content-wrapper">
 	<!-- Шапка -->
 	<header class="main-header">
 		<div class="center clearfix">
@@ -17,7 +25,7 @@
 			</div>
 			<nav class="main-navigation">
 				<ul class="main-navigation-menu">
-					<li class="main-navigation-catalog">
+					<li class="main-navigation-item main-navigation-catalog">
 						<a href="catalog.html">Каталог</a>
 						<div class="submenu-wrap">
 							<ul class="main-navigation-submenu">
@@ -29,10 +37,10 @@
 							</ul>
 						</div>
 					</li>
-					<li class="main-navigation-delivery">
+					<li class="main-navigation-item main-navigation-delivery">
 						<a href="#">Доставка и оплата</a>
 					</li>
-					<li class="main-navigation-about">
+					<li class="main-navigation-item main-navigation-about">
 						<a href="#">О Компании</a>
 					</li>
 				</ul>
@@ -56,8 +64,10 @@
 								<input class="login-email" type="email" name="login-email" placeholder="Электронная почта">
 								<input class="login-password" type="password" name="login-password" placeholder="Пароль">
 								<button class="btn" type="submit">Войти</button>
-								<span class="login-forget"><a href="#">Забыли пароль?</a></span>
-								<span class="login-new"><a href="#">Новая регистрация</a></span>
+								<div class="login-forget-new">
+									<a href="#">Забыли пароль?</a>
+									<a href="#">Новая регистрация</a>
+								</div>
 							</form>
 						</div>
 					</div>
@@ -75,16 +85,28 @@
 			</div>
 		</div>
 	</header>
+	<!-- Слайдер -->
+	<div class="slider">
+		<div class="slide" id="slide1">
+			<div class="slide-title">Крем-брюле и пломбир с малиновым джемом</div>
+				<a class="slide-btn" href="#">Давайте оба!</a>
+			</div>
+		<div class="slide" id="slide2">
+			<div class="slide-title">Шоколадный пломбир и лимонный сорбет</div>
+				<a class="slide-btn" href="#">Давайте оба!</a>
+			</div>
+		<div class="slide" id="slide3">
+			<div class="slide-title">Пломбир с помадкой и клубничный щербет</div>
+				<a class="slide-btn" href="#">Давайте оба!</a>
+			</div>
+		<div class="slider-controls">
+			<label for="btn-1"></label>
+			<label for="btn-2"></label>
+			<label for="btn-3"></label>
+		</div>
+	</div>
 	<!-- Основное содержание -->
 	<main class="center">
-		<!-- Слайдер -->
-		<!-- <section class="slider">
-			<ul>
-				<li>Крем-брюле и пломбир с малиновым джемом</li>
-				<li>Шоколадный пломбир и лимонный сорбет</li>
-				<li>Пломбир с помадкой и клубничный щербет</li>
-			</ul>
-		</section> -->
 		<!-- Спецпредложения -->
 		<section class="action clearfix">
 			<section class="action-left">
@@ -150,19 +172,19 @@
 			<h1 class="info-title">Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h1>
 			<div class="info-table clearfix">
 				<div class="info-note">
-					<span class="info-icon info-icon-icecream"><!-- <img src="img/info-table-icecream.svg" width="47" height="47" alt=""> --></span>
+					<span class="info-icon info-icon-icecream"></span>
 					<p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
 				</div>
 				<div class="info-note">
-					<span class="info-icon info-icon-cow"><!-- <img src="img/info-table-cow.svg" width="47" height="47" alt=""> --></span>
+					<span class="info-icon info-icon-cow"></span>
 					<p>Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
 				</div>
 				<div class="info-note">
-					<span class="info-icon info-icon-sheet"><!-- <img src="img/info-table-sheet.svg" width="47" height="47" alt=""> --></span>
+					<span class="info-icon info-icon-sheet"></span>
 					<p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
 				</div>
 				<div class="info-note">
-					<span class="info-icon info-icon-thermometer"><!-- <img src="img/info-table-thermometer.svg" width="47" height="47" alt=""> --></span>
+					<span class="info-icon info-icon-thermometer"></span>
 					<p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет ему сохранить свой превосходный вкус.</p>
 				</div>
 			</div>
@@ -203,13 +225,12 @@
 					<a class="btn feedback-btn" href="#">Форма обратной связи</a>
 					<div class="feedback-appearance">
 						<form class="feedback-form" name="feedback-form" action="#" method="post">
-							<fieldset>
-								<legend>Мы обязательно вам ответим!</legend>
-								<input class="feedback-name" type="text" name="feedback-name" placeholder="Как вас зовут?">
-								<input class="feedback-email" type="email" name="feedback-email" placeholder="Ваша почта для ответа?">
-								<input class="feedback-text" type="text" name="feedback-text" placeholder="Напишите что-нибудь...">
-								<button class="btn" type="submit">Отправить</button>
-							</fieldset>
+							<button class="feedback-form-close" type="button" title="Закрыть">Закрыть</button>
+							<h2 class="feedback-title">Мы обязательно вам ответим!</h2>
+							<input class="feedback-name" type="text" name="feedback-name" placeholder="Как вас зовут?">
+							<input class="feedback-email" type="email" name="feedback-email" placeholder="Ваша почта для ответа?">
+							<input class="feedback-text" type="text" name="feedback-text" placeholder="Напишите что-нибудь...">
+							<button class="btn" type="submit">Отправить</button>
 						</form>
 					</div>
 				</div>
@@ -254,5 +275,7 @@
 			</div>
 		</div>
 	</footer>
+</div>
+</div>
 </body>
 </html>
