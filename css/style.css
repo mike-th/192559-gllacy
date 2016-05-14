@@ -149,12 +149,7 @@ body > input[type="radio"] {
 	background-color: rgba(255, 255, 255, 0.4);
 }
 
-h1.content-title {
-	font-size: 35px;
-	line-height: 41px;
-	color: #ffffff;
-	font-weight: bold;
-}
+/* Основные стили */
 
 .clearfix::after {
 	content: "";
@@ -428,8 +423,9 @@ a.search {
 }
 
 .search-form {
+	position: relative;
 	padding: 20px 15px;
-	background-color: #fefefe;
+	background-color: #f8f7f4;
 	border-radius: 5px;
 }
 
@@ -437,30 +433,45 @@ a.search {
 	width: 100%;
 	margin: 0;
 	padding: 9px 13px;
-	font: normal 16px/24px "Roboto", "Arial", "Helvetica", sans-serif;
+	font: bold 16px/24px "Roboto", "Arial", "Helvetica", sans-serif;
 	color: #323232;
 	border: 1px solid #d3d3d2;
 	border-radius: 5px;
 	background-color: #ffffff;
 	box-sizing: border-box;
 	outline: none;
-	opacity: 1;
 }
 
-/* Цвет placeholder */
+.search-form label {
+	display: none;
+	position: absolute;
+	top: 5px;
+	left: 30px;
+	font-size: 11px;
+	font-weight: normal;
+	line-height: 13px;
+	color: #5b9ddf;
+}
 
-.search-form input::-webkit-input-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color:#999999;}
-.search-form input::-moz-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color:#999999;}
-.search-form input:-moz-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color:#999999;}
-.search-form input:-ms-input-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color:#999999;}
+.search-form input:focus + label {
+	display: block;
+}
 
+/* Стили для placeholder */
+
+.search-form input::-webkit-input-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity:1}
+.search-form input::-moz-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity:1}
+.search-form input:-moz-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity:1}
+.search-form input:-ms-input-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity:1}
 
 .search-form input:hover {
-	border: 2px solid #999999;
+	border-color: #999999;
+	box-shadow: inset 0 0 0 1px #999999;
 }
 
 .search-form input:focus {
-	border: 2px solid #2e88e4;
+	border-color: #2e88e4;
+	box-shadow: inset 0 0 0 1px #2e88e4;
 }
 
 /* Шапка - Личный кабинет - Поиск - Изменение фона кнопки при наведении */
@@ -476,6 +487,7 @@ a.search {
 
 .search-wrap:hover .search-appearance {
 	display: block;
+	z-index: 10;
 }
 
 /* Шапка - Личный кабинет - Вход */
@@ -530,11 +542,12 @@ a.login {
 }
 
 .login-form {
+	position: relative;
 	padding-top: 20px;
 	padding-left: 19px;
 	padding-right: 17px;
 	padding-bottom: 27px;
-	background-color: #fefefe;
+	background-color: #f8f7f4;
 	border-radius: 6px;
 }
 
@@ -543,30 +556,51 @@ a.login {
 	margin: 0;
 	margin-bottom: 20px;
 	padding: 9px 13px;
-	font: normal 16px/24px "Roboto", "Arial", "Helvetica", sans-serif;
+	font: bold 16px/24px "Roboto", "Arial", "Helvetica", sans-serif;
 	color: #323232;
 	border: 1px solid #d3d3d2;
 	border-radius: 5px;
 	background-color: #ffffff;
 	box-sizing: border-box;
 	outline: none;
-	opacity: 1;
 }
 
-/* Цвет placeholder */
+.login-form label {
+	display: none;
+	position: absolute;
+	top: 5px;
+	left: 26px;
+	font-size: 11px;
+	line-height: 13px;
+	font-weight: normal;
+	color: #5b9ddf;
+}
 
-.login-form input::-webkit-input-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color:#999999;}
-.login-form input::-moz-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color:#999999;}
-.login-form input:-moz-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color:#999999;}
-.login-form input:-ms-input-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color:#999999;}
+.login-form label[for="login-password"] {
+	top: 69px;
+	left: 30px;
+}
+
+.login-form input:focus + label {
+	display: block;
+}
+
+/* Стили для placeholder */
+
+.login-form input::-webkit-input-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity:1}
+.login-form input::-moz-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity:1}
+.login-form input:-moz-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity:1}
+.login-form input:-ms-input-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity:1}
 
 
 .login-form input:hover {
-	border: 2px solid #999999;
+	border-color: #999999;
+	box-shadow: inset 0 0 0 1px #999999;
 }
 
 .login-form input:focus {
-	border: 2px solid #2e88e4;
+	border-color: #2e88e4;
+	box-shadow: inset 0 0 0 1px #2e88e4;
 }
 
 .login-forget-new {
@@ -608,6 +642,7 @@ a.login {
 
 .login-wrap:hover .login-appearance {
 	display: block;
+	z-index: 10;
 }
 
 /* Шапка - Личный кабинет - Корзина */
@@ -639,7 +674,7 @@ a.basket {
 	transition: background-color 0.5s;
 }
 
-.basket::before {
+a.basket::before {
 	display: inline-block;
 	vertical-align: middle;
 	margin: 0;
@@ -650,8 +685,17 @@ a.basket {
 	background: transparent url("../img/main-sprite.png") no-repeat -5px -5px;
 }
 
+a.basket-full {
+	color: #323232;
+	background-color: #f8f7f4;
+}
+
+a.basket-full::before {
+	background: transparent url("../img/main-sprite.png") no-repeat -36px -5px;
+}
+
 .basket-appearance {
-	display: block;
+	display: none;
 	position: absolute;
 	top: 100%;
 	right: 0;
@@ -667,61 +711,98 @@ a.basket {
 	font-size: 13px;
 	line-height: 16px;
 	color: #323232;
-	background-color: #fefefe;
+	font-weight: normal;
+	background-color: #f8f7f4;
 	border-radius: 6px;
 }
 
 .basket-table {
+	padding: 0;
 	width: 100%;
 	text-align: left;
 	border-collapse: collapse;
+	border-bottom: 1px solid #333333;
 }
 
 .basket-table td {
-  border: 1px solid black;
+	border: 1px solid black;
+	padding: 0;
+	text-align: center;
 }
 
-.basket-cell-delete {
+td.basket-cell-delete {
 	position: relative;
 	width: 20px;
 }
 
 .basket-delete {
 	position: absolute;
-  top: 10px;
-  left: 2px;
-  width: 10px;
-  height: 10px;
-  font-size: 0;
-  background-color: red;
-  border: 0;
-  outline: 0;
-  cursor: pointer;
+	top: 10px;
+	left: 0;
+	width: 10px;
+	height: 10px;
+	font-size: 0;
+	background-color: transparent;
+	border: 0;
+	outline: none;
+	cursor: pointer;
 }
 
 .basket-delete::before,
 .basket-delete::after {
-  content: "";
-  position: absolute;
-  top: 4px;
-  left: -1px;
-  width: 13px;
-  height: 2px;
-  background-color: #323232;
-  border-radius: 10px;
+	content: "";
+	position: absolute;
+	top: 4px;
+	left: -1px;
+	width: 13px;
+	height: 1px;
+	background-color: #353535;
+	border-radius: 10px;
 }
 
 .basket-delete::before {
-  transform: rotate(45deg);
+	transform: rotate(45deg);
 }
 
 .basket-delete::after {
-  transform: rotate(-45deg);
+	transform: rotate(-45deg);
 }
 
-.basket-cell-image {
-	width: 45px;
-	padding: 0 6px;
+td.basket-cell-image {
+	width: 41px;
+	padding: 0;
+}
+
+td.basket-cell-title {
+	padding-left: 8px;
+	padding-right: 8px;
+	width: 223px;
+	text-align: left;
+}
+
+td.basket-cell-weight {
+	padding-left: 8px;
+	padding-right: 8px;
+	width: 105px;
+}
+
+td.basket-cell-weight .basket-weight-price {
+	color: #999999;
+}
+
+td.basket-cell-price {
+	padding-left: 8px;
+	padding-right: 8px;
+	width: 69px;
+}
+
+.basket-result {
+	margin: 15px 0;
+	padding: 0;
+	font-size: 15px;
+	line-height: 18px;
+	font-weight: bold;
+	color: #333333;
 }
 
 /* Шапка - Личный кабинет - Корзина - Изменение фона кнопки при наведении */
@@ -734,9 +815,13 @@ a.basket {
 .basket-wrap:hover .basket::before {
 	background: transparent url("../img/sprite/basket-hover.png") no-repeat;
 }
+.basket-wrap:hover .basket-full::before {
+	background: transparent url("../img/main-sprite.png") no-repeat -36px -5px;
+}
 
 .basket-wrap:hover .basket-appearance {
 	display: block;
+	z-index: 10;
 }
 
 /* Шапка - Телефон магазина */
@@ -773,7 +858,7 @@ a.basket {
 
 .action {
 	margin-top: 40px;
-	margin-bottom: 40px;
+	margin-bottom: 57px;
 }
 
 .action-left {
@@ -834,6 +919,7 @@ h2.action-title {
 	position: relative;
 	width: 267px;
 	min-height: 322px;
+	margin-top: -17px;
 	margin-right: 26px;
 	margin-bottom: 0;
 	vertical-align: top;
@@ -906,6 +992,7 @@ h2.product-title {
 	margin: 0;
 	margin-top: 14px;
 	margin-bottom: 9px;
+	width: 258px;
 	font-size: 16px;
 	line-height: 22px;
 	color: #ffffff;
@@ -936,7 +1023,7 @@ h2.product-title {
 }
 
 .product-wrap:hover {
-  z-index: 10;
+	z-index: 5;
 }
 
 .product-wrap:hover::before {
@@ -1098,6 +1185,10 @@ h2.news-left-title {
 	color: #5a5a5a;
 }
 
+.subscription-form {
+	position: relative;
+}
+
 .subscription-form input {
 	width: 368px;
 	margin: 0;
@@ -1110,23 +1201,39 @@ h2.news-left-title {
 	background-color: #ffffff;
 	box-sizing: border-box;
 	outline: none;
-	opacity: 1;
 }
 
-/* Цвет placeholder */
+.subscription-form label {
+	display: none;
+	position: absolute;
+	top: -15px;
+	left: 15px;
+	font-size: 11px;
+	line-height: 13px;
+	font-weight: normal;
+	color: #5b9ddf;
+}
 
-.subscription-form input::-webkit-input-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color:#999999;}
-.subscription-form input::-moz-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color:#999999;}
-.subscription-form input:-moz-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color:#999999;}
-.subscription-form input:-ms-input-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color:#999999;}
+.subscription-form input:focus + label {
+	display: block;
+}
+
+/* Стили для placeholder */
+
+.subscription-form input::-webkit-input-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity:1}
+.subscription-form input::-moz-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity:1}
+.subscription-form input:-moz-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity:1}
+.subscription-form input:-ms-input-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity:1}
 
 
 .subscription-form input:hover {
-	border: 2px solid #999999;
+	border-color: #999999;
+	box-shadow: inset 0 0 0 1px #999999;
 }
 
 .subscription-form input:focus {
-	border: 2px solid #2e88e4;
+	border-color: #2e88e4;
+	box-shadow: inset 0 0 0 1px #2e88e4;
 }
 
 /* Карта */
@@ -1192,8 +1299,10 @@ span.map-contact-time {
 	color: #323232;
 }
 
+/* Форма обратной связи */
+
 .feedback-appearance {
-	display: block;
+	display: none;
 	position: fixed;
 	top: 338px;
 	left: 50%;
@@ -1204,13 +1313,15 @@ span.map-contact-time {
 }
 
 .feedback-form {
+	position: relative;
 	padding-top: 17px;
 	padding-left: 24px;
 	padding-right: 25px;
 	padding-bottom: 27px;
 	text-align: right;
-	background-color: #fefefe;
+	background-color: #f8f7f4;
 	border-radius: 10px;
+	z-index: 10;
 }
 
 h2.feedback-title {
@@ -1223,12 +1334,12 @@ h2.feedback-title {
 	color: #323232;
 }
 
-.feedback-form input {
+.feedback-input {
 	width: 265px;
 	margin: 0;
 	margin-bottom: 20px;
 	padding: 9px 13px;
-	font: normal 16px/24px "Roboto", "Arial", "Helvetica", sans-serif;
+	font: bold 16px/24px "Roboto", "Arial", "Helvetica", sans-serif;
 	text-align: left;
 	color: #323232;
 	border: 1px solid #d3d3d2;
@@ -1236,12 +1347,20 @@ h2.feedback-title {
 	background-color: #ffffff;
 	box-sizing: border-box;
 	outline: none;
-	opacity: 1;
 }
 
-.feedback-form input.feedback-text {
+.feedback-data {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	text-align: left;
+}
+
+.feedback-text {
 	width: 100%;
 	height: 155px;
+	resize: none;
+	overflow: auto;
 }
 
 /*.feedback-form input.feedback-text::-webkit-input-placeholder {}
@@ -1250,59 +1369,71 @@ h2.feedback-title {
 .feedback-form input.feedback-text:-ms-input-placeholder {}
 */
 
-/* Цвет placeholder */
+/* Стили для placeholder */
 
-.feedback-form input::-webkit-input-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color:#999999;}
-.feedback-form input::-moz-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color:#999999;}
-.feedback-form input:-moz-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color:#999999;}
-.feedback-form input:-ms-input-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color:#999999;}
+.feedback-input::-webkit-input-placeholder {font: normal 16px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity:1}
+.feedback-input::-moz-placeholder {font: normal 16px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity:1}
+.feedback-input:-moz-placeholder {font: normal 16px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity:1}
+.feedback-input:-ms-input-placeholder {font: normal 16px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity:1}
 
 
-.feedback-form input:hover {
-	border: 2px solid #999999;
+.feedback-input:hover {
+	border-color: #999999;
+	box-shadow: inset 0 0 0 1px #999999;
 }
 
-.feedback-form input:focus {
-	border: 2px solid #2e88e4;
+.feedback-input:focus {
+	border-color: #2e88e4;
+	box-shadow: inset 0 0 0 1px #2e88e4;
 }
 
 .feedback-wrap:hover .feedback-appearance {
 	display: block;
 }
 
+.feedback-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.3);
+	z-index: 5;
+}
+
 /* Кнопка закрыть */
 
 .feedback-form-close {
 	position: absolute;
-  top: 15;
-  right: 15px;
-  width: 18px;
-  height: 18px;
-  font-size: 0;
-  background-color: transparent;
-  border: 0;
-  outline: 0;
-  cursor: pointer;
+	top: 15;
+	right: 15px;
+	width: 18px;
+	height: 18px;
+	font-size: 0;
+	background-color: transparent;
+	border: 0;
+	outline: 0;
+	cursor: pointer;
 }
 
 .feedback-form-close::before,
 .feedback-form-close::after {
-  content: "";
-  position: absolute;
-  top: 8px;
-  left: -2px;
-  width: 22px;
-  height: 2px;
-  background-color: #323232;
-  border-radius: 2px;
+	content: "";
+	position: absolute;
+	top: 8px;
+	left: -2px;
+	width: 22px;
+	height: 2px;
+	background-color: #323232;
+	border-radius: 2px;
 }
 
 .feedback-form-close::before {
-  transform: rotate(45deg);
+	transform: rotate(45deg);
 }
 
 .feedback-form-close::after {
-  transform: rotate(-45deg);
+	transform: rotate(-45deg);
 }
 
 /* Подвал */
@@ -1311,8 +1442,6 @@ h2.feedback-title {
 	padding-top: 20px;
 	padding-bottom: 20px;
 	font-size: 0;
-	/* Фон для сетки */
-	background-color: #2e8100;
 }
 
 /* Подвал - Социальные сети */
@@ -1324,8 +1453,6 @@ h2.feedback-title {
 	margin-right: 26px;
 	margin-top: 5px;
 	font-size: 18px;
-	/* Фон для сетки */
-	background-color: #20b2aa;
 }
 
 .social-btn {
@@ -1334,17 +1461,22 @@ h2.feedback-title {
 	width: 32px;
 	height: 32px;
 	font-size: 0px;
-	border: rgba(255, 255, 255, 0.5) solid 3px;
+	border: 3px solid rgba(255, 255, 255, 0.5);
 	border-radius: 50%;
+	opacity: 0.8;
 	background: transparent url("../img/main-sprite.png") no-repeat;
 }
 
 .social-btn:hover {
-	border: rgba(255, 255, 255, 0.7) solid 4px;
+	opacity: 1;
+	border-color: rgba(255, 255, 255, 0.7);
+	box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.7);
 }
 
 .social-btn:active {
-	border: rgba(255, 255, 255, 0.7) solid 4px;
+	opacity: 1;
+	border-color: rgba(255, 255, 255, 0.7);
+	box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.7);
 }
 
 .social-btn-tw {
@@ -1376,8 +1508,6 @@ h2.feedback-title {
 	font-weight: normal;
 	line-height: 18px;
 	color: #ffffff;
-	/* Фон для сетки */
-	background-color: #20b2aa;
 }
 
 .footer-navigation a {
@@ -1434,8 +1564,6 @@ a.footer-navigation-fav {
 	font-weight: normal;
 	line-height: 18px;
 	color: #fefefe;
-	/* Фон для сетки */
-	background-color: #20b2aa;
 }
 
 .footer-copyright p {
@@ -1462,14 +1590,150 @@ a.footer-copyright-ref:active {
 
 /* Стили только для catalog.html */
 
+h1.content-title {
+	margin: 0;
+	margin-bottom: 20px;
+	padding: 0;
+	font-size: 35px;
+	line-height: 41px;
+	color: #ffffff;
+	font-weight: bold;
+}
+
 .content-filter {
 	margin-bottom: 40px;
 }
 
+/* Хлебные крошки */
+
+.breadcrumbs {
+	margin: 0;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.breadcrumbs ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.breadcrumbs li {
+	position: relative;
+	display: inline;
+}
+
+.breadcrumbs a {
+	color: #ffffff;
+	text-decoration: none;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.breadcrumbs a:hover {
+	color: #ffbc9e;
+	border-bottom: 1px solid rgba(255, 188, 158, 0.3);
+}
+
+/* Фильтры */
+
+.content-filter form {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: normal;
+	color: #ffffff;
+}
+
+.content-filter fieldset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	text-align: left;
+}
+
+.content-filter-sorting {
+	width: 193px;
+}
+
+.content-filter legend {
+	margin-left: 15px;
+	padding-bottom: 5px;
+}
+
+
+
+
+/* Страницы каталога */
+
 .pagination {
-	margin-top: 82px;
+	margin-top: 27px;
 	margin-bottom: 30px;
+	font-size: 0;
 	text-align: right;
-	/* Фон для сетки */
-	background-color: #849d8f;
+	white-space: nowrap;
+}
+
+.pagination a {
+	display: inline-block;
+	vertical-align: middle;
+	min-width: 26px;
+	padding: 0;
+	margin: 0;
+	margin-right: 2px;
+	font-size: 16px;
+	line-height: 26px;
+	font-weight: 500;
+	color: #ffffff;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 50%;
+}
+
+.pagination a.current {
+	color: #323232;
+	background-color: #ffffff;
+}
+
+.pagination a:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.pagination a.current:hover {
+	color: #323232;
+	background-color: #ffffff;
+}
+
+a.page-prev,
+a.page-next {
+	font-size: 0px;
+}
+
+a.page-next {
+	margin-right: 0;
+}
+
+a.page-prev::before {
+	display: inline-block;
+	vertical-align: middle;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 8px;
+	height: 14px;
+	background: transparent url("../img/main-sprite.png") no-repeat -617px -5px;
+	opacity: 0.2;
+}
+
+a.page-next::before {
+	display: inline-block;
+	vertical-align: middle;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 8px;
+	height: 14px;
+	background: transparent url("../img/main-sprite.png") no-repeat -858px -5px;
 }

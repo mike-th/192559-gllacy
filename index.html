@@ -54,6 +54,7 @@
 						<div class="search-appearance">
 							<form class="search-form" name="search-form" action="#" method="get">
 								<input class="search-request" type="search" name="search-request" placeholder="Что ищем?">
+								<label for="search-request">Что ищем?</label>
 							</form>
 						</div>
 					</div>
@@ -62,7 +63,9 @@
 						<div class="login-appearance">
 							<form class="login-form" name="search-form" action="#" method="post">
 								<input class="login-email" type="email" name="login-email" placeholder="Электронная почта">
+								<label for="login-email">Электронная почта</label>
 								<input class="login-password" type="password" name="login-password" placeholder="Пароль">
+								<label for="login-password">Пароль</label>
 								<button class="btn" type="submit">Войти</button>
 								<div class="login-forget-new">
 									<a href="#">Забыли пароль?</a>
@@ -201,7 +204,8 @@
 				<div class="news-right">
 					<p class="news-right-text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
 					<form class="subscription-form" action="#" method="post">
-						<input class="subscription-email" type="email" name="mail" placeholder="Электронная почта">
+						<input class="subscription-email" type="email" name="subscription-email" placeholder="Электронная почта">
+						<label for="subscription-email">Электронная почта</label>
 						<button class="btn" type="submit">Отправить</button>
 					</form>
 				</div>
@@ -227,11 +231,14 @@
 						<form class="feedback-form" name="feedback-form" action="#" method="post">
 							<button class="feedback-form-close" type="button" title="Закрыть">Закрыть</button>
 							<h2 class="feedback-title">Мы обязательно вам ответим!</h2>
-							<input class="feedback-name" type="text" name="feedback-name" placeholder="Как вас зовут?">
-							<input class="feedback-email" type="email" name="feedback-email" placeholder="Ваша почта для ответа?">
-							<input class="feedback-text" type="text" name="feedback-text" placeholder="Напишите что-нибудь...">
+							<fieldset class="feedback-data">
+								<input class="feedback-input feedback-name" type="text" name="feedback-name" placeholder="Как вас зовут?">
+								<input class="feedback-input feedback-email" type="email" name="feedback-email" placeholder="Ваша почта для ответа?">
+								<textarea class="feedback-input feedback-text" name="feedback-text" placeholder="Напишите что-нибудь..."></textarea>
+							</fieldset>
 							<button class="btn" type="submit">Отправить</button>
 						</form>
+						<div class="feedback-overlay"></div>
 					</div>
 				</div>
 			</div>
