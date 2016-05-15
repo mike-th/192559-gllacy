@@ -184,6 +184,28 @@ body > input[type="radio"] {
 	box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 
+.login-btn {
+	padding: 10px 10px;
+	width: 100px;
+}
+
+.action-btn {
+	padding: 11px 22px;
+}
+
+.subscription-btn {
+	padding: 10px 10px;
+	width: 129px;
+}
+
+.feedback-btn {
+	display: block;
+}
+
+.basket-btn {
+	padding: 10px 14px;
+}
+
 /* Шапка */
 
 .main-header {
@@ -196,7 +218,7 @@ body > input[type="radio"] {
 	padding: 0 27px;
 }
 
-/* Шапка - Лого */
+/* Лого */
 
 .main-logo {
 	margin-top: 10px;
@@ -212,7 +234,7 @@ body > input[type="radio"] {
 	float: left;
 }
 
-/* Шапка - Меню */
+/* Меню */
 
 .main-navigation-menu {
 	position: relative;
@@ -241,7 +263,7 @@ body > input[type="radio"] {
 	text-decoration: none;
 }
 
-.main-navigation-item > a:after {
+.main-navigation-item > a::after {
 	content: "";
 	position: absolute;
 	bottom: 6px;
@@ -258,9 +280,17 @@ body > input[type="radio"] {
 	border-radius: 32px;
 }
 
+.main-navigation-item > a:hover::after {
+	display: none;
+}
+
 .main-navigation-item > a:active {
 	background-color: #f8f7f4;
 	box-shadow: inset 0 2px 2px #696969;
+}
+
+.main-navigation-item > a:active::after {
+	display: none;
 }
 
 .main-navigation-item.active > a {
@@ -269,6 +299,12 @@ body > input[type="radio"] {
 	background-color: #d07058;
 	border-radius: 32px;
 }
+
+.main-navigation-item.active > a::after {
+	display: none;
+}
+
+/* Субменю */
 
 .submenu-wrap {
 	position: absolute;
@@ -307,12 +343,22 @@ body > input[type="radio"] {
 }
 
 .main-navigation-submenu > li:first-child > a {
+	position: relative;
 	font-weight: bold;
 	color: #323232;
-	border-bottom: 1px solid rgba(50, 50, 50, 0.2);
 }
 
-/* Шапка - Меню - Субменю - Изменение фона кнопки при наведении */
+.main-navigation-submenu > li:first-child > a::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 6px;
+	right: 9px;
+	height: 1px;
+	background-color: rgba(50, 50, 50, 0.2);
+}
+
+/* Изменение фона кнопки при наведении */
 
 .main-navigation-submenu > li:hover {
 	background-color: #fbded7;
@@ -328,7 +374,7 @@ body > input[type="radio"] {
 	border-radius: 0 0 5px 5px;
 }
 
-/* Шапка - Меню - Субменю - Изменение фона активной кнопки */
+/* Изменение фона активной кнопки */
 
 .main-navigation-submenu > li > a:active {
 	background-color: #f6b5a5;
@@ -344,7 +390,7 @@ body > input[type="radio"] {
 	border-radius: 0 0 5px 5px;
 }
 
-/* Шапка - Меню - Субменю - Изменение фона текущей кнопки */
+/* Изменение фона текущей кнопки */
 
 .main-navigation-submenu li.active > a {
 	color: #ffffff;
@@ -363,11 +409,11 @@ body > input[type="radio"] {
 	border-radius: 0 0 5px 5px;
 }
 
-/* Шапка - Личный кабинет */
+/* Личный кабинет */
 
 .main-right-block {
 	margin: 0;
-	margin-top: 23px;
+	margin-top: 22px;
 	padding: 0;
 	max-width: 267px;
 	float: right;
@@ -375,7 +421,7 @@ body > input[type="radio"] {
 	font-size: 0px;
 }
 
-/* Шапка - Личный кабинет - Поиск */
+/* Поиск */
 
 .search-wrap {
 	display: inline-block;
@@ -432,6 +478,7 @@ a.search {
 
 .search-form input {
 	width: 100%;
+	height: 44px;
 	margin: 0;
 	padding: 9px 13px;
 	font: bold 16px/24px "Roboto", "Arial", "Helvetica", sans-serif;
@@ -460,10 +507,32 @@ a.search {
 
 /* Стили для placeholder */
 
-.search-form input::-webkit-input-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
-.search-form input::-moz-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
-.search-form input:-moz-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
-.search-form input:-ms-input-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
+.search-form input::-webkit-input-placeholder {
+	font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif;
+	color: #999999;
+	opacity: 1
+}
+
+.search-form input::-moz-placeholder {
+	font: normal 14px/24px "Roboto", "Arial", "Helvetica",
+	sans-serif;
+	color: #999999;
+	opacity: 1
+}
+
+.search-form input:-moz-placeholder {
+	font: normal 14px/24px "Roboto", "Arial", "Helvetica",
+	sans-serif;
+	color: #999999;
+	opacity: 1
+}
+
+.search-form input:-ms-input-placeholder {
+	font: normal 14px/24px "Roboto", "Arial", "Helvetica",
+	sans-serif;
+	color: #999999;
+	opacity: 1
+}
 
 .search-form input:hover {
 	border-color: #999999;
@@ -475,14 +544,25 @@ a.search {
 	box-shadow: inset 0 0 0 1px #2e88e4;
 }
 
-/* Стили для placeholder при фокусе */
+/* Стили для placeholder в фокусе */
 
-.search-form input:focus::-webkit-input-placeholder {opacity: 0;}
-.search-form input:focus::-moz-placeholder {opacity: 0;}
-.search-form input:focus:-moz-placeholder {opacity: 0;}
-.search-form input:focus:-ms-input-placeholder {opacity: 0;}
+.search-form input:focus::-webkit-input-placeholder {
+	opacity: 0;
+}
 
-/* Шапка - Личный кабинет - Поиск - Изменение фона кнопки при наведении */
+.search-form input:focus::-moz-placeholder {
+	opacity: 0;
+}
+
+.search-form input:focus:-moz-placeholder {
+	opacity: 0;
+}
+
+.search-form input:focus:-ms-input-placeholder {
+	opacity: 0;
+}
+
+/* Изменение фона кнопки при наведении */
 
 .search-wrap:hover a.search {
 	color: #323232;
@@ -498,7 +578,7 @@ a.search {
 	z-index: 10;
 }
 
-/* Шапка - Личный кабинет - Вход */
+/* Вход */
 
 .login-wrap {
 	display: inline-block;
@@ -559,10 +639,15 @@ a.login {
 	border-radius: 6px;
 }
 
-.login-form input {
-	width: 100%;
+.login-input-wrap {
+	position: relative;
 	margin: 0;
 	margin-bottom: 20px;
+}
+
+.login-form input {
+	width: 100%;
+	height: 44px;
 	padding: 9px 13px;
 	font: bold 16px/24px "Roboto", "Arial", "Helvetica", sans-serif;
 	color: #323232;
@@ -576,17 +661,12 @@ a.login {
 .login-form label {
 	display: none;
 	position: absolute;
-	top: 5px;
-	left: 26px;
+	top: -15px;
+	left: 15px;
 	font-size: 11px;
 	line-height: 13px;
 	font-weight: normal;
 	color: #5b9ddf;
-}
-
-.login-form label[for="login-password"] {
-	top: 69px;
-	left: 30px;
 }
 
 .login-form input:focus + label {
@@ -595,11 +675,29 @@ a.login {
 
 /* Стили для placeholder */
 
-.login-form input::-webkit-input-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
-.login-form input::-moz-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
-.login-form input:-moz-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
-.login-form input:-ms-input-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
+.login-form input::-webkit-input-placeholder {
+	font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif;
+	color: #999999;
+	opacity: 1
+}
 
+.login-form input::-moz-placeholder {
+	font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif;
+	color: #999999;
+	opacity: 1
+}
+
+.login-form input:-moz-placeholder {
+	font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif;
+	color: #999999;
+	opacity: 1
+}
+
+.login-form input:-ms-input-placeholder {
+	font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif;
+	color: #999999;
+	opacity: 1
+}
 
 .login-form input:hover {
 	border-color: #999999;
@@ -611,12 +709,23 @@ a.login {
 	box-shadow: inset 0 0 0 1px #2e88e4;
 }
 
-/* Стили для placeholder при фокусе */
+/* Стили для placeholder в фокусе */
 
-.login-form input:focus::-webkit-input-placeholder {opacity: 0;}
-.login-form input:focus::-moz-placeholder {opacity: 0;}
-.login-form input:focus:-moz-placeholder {opacity: 0;}
-.login-form input:focus:-ms-input-placeholder {opacity: 0;}
+.login-form input:focus::-webkit-input-placeholder {
+	opacity: 0;
+}
+
+.login-form input:focus::-moz-placeholder {
+	opacity: 0;
+}
+
+.login-form input:focus:-moz-placeholder {
+	opacity: 0;
+}
+
+.login-form input:focus:-ms-input-placeholder {
+	opacity: 0;
+}
 
 .login-forget-new {
 	display: inline-block;
@@ -644,7 +753,7 @@ a.login {
 	border-bottom: 2px solid rgba(232, 77, 55, 0.3);
 }
 
-/* Шапка - Личный кабинет - Вход - Изменение фона кнопки при наведении */
+/* Изменение фона кнопки при наведении */
 
 .login-wrap:hover a.login {
 	color: #323232;
@@ -660,12 +769,7 @@ a.login {
 	z-index: 10;
 }
 
-.login-btn {
-	padding: 10px 10px;
-	width: 100px;
-}
-
-/* Шапка - Личный кабинет - Корзина */
+/* Корзина */
 
 .basket-wrap {
 	display: inline-block;
@@ -713,7 +817,7 @@ a.basket-full::before {
 }
 
 .basket-appearance {
-	display: block;
+	display: none;
 	position: absolute;
 	top: 100%;
 	right: 0;
@@ -726,6 +830,7 @@ a.basket-full::before {
 
 .basket-list {
 	padding: 20px 15px;
+	padding-top: 10px;
 	text-align: right;
 	font-size: 13px;
 	line-height: 16px;
@@ -736,31 +841,33 @@ a.basket-full::before {
 }
 
 .basket-table {
+	margin: 0;
+	margin-bottom: 13px;
 	padding: 0;
 	width: 100%;
 	text-align: left;
-
 	border-collapse: collapse;
-	border-bottom: 1px solid #333333;
 }
 
 .basket-table td {
-	border: 1px solid black;
-	padding: 0;
-	padding-right: 5px;
-	padding-bottom: 15px;
+	padding: 10px 0;
 	text-align: center;
 }
 
 td.basket-cell-delete {
 	position: relative;
-	width: 20px;
+	width: 14px;
 }
+
+/* Кнопка "Закрыть" */
 
 .basket-delete {
 	position: absolute;
-	top: 10px;
-	left: 0;
+	top: 50%;
+	left: 50%;
+	margin: 0;
+	margin-top: -5px;
+	margin-left: -5px;
 	width: 10px;
 	height: 10px;
 	font-size: 0;
@@ -791,17 +898,21 @@ td.basket-cell-delete {
 }
 
 td.basket-cell-image {
-	width: 35px;
-	padding: 0;
+	width: 59px;
+}
+
+.basket-cell-image img {
+	display: inline-block;
+	vertical-align: middle;
 }
 
 td.basket-cell-title {
-	width: 235px;
+	width: 237px;
 	text-align: left;
 }
 
 td.basket-cell-weight {
-	width: 105px;
+	width: 113px;
 }
 
 td.basket-cell-weight .basket-weight-price {
@@ -809,19 +920,20 @@ td.basket-cell-weight .basket-weight-price {
 }
 
 td.basket-cell-price {
-	width: 69px;
+	width: 87px;
 }
 
 .basket-result {
-	margin: 15px 0;
-	padding: 0;
+	margin: 0;
+	padding: 14px 0;
 	font-size: 15px;
 	line-height: 18px;
 	font-weight: bold;
 	color: #333333;
+	border-top: 1px solid #cacac7;
 }
 
-/* Шапка - Личный кабинет - Корзина - Изменение фона кнопки при наведении */
+/* Изменение фона кнопки при наведении */
 
 .basket-wrap:hover a.basket {
 	color: #323232;
@@ -840,7 +952,7 @@ td.basket-cell-price {
 	z-index: 10;
 }
 
-/* Шапка - Телефон магазина */
+/* Телефон магазина */
 
 .main-phone {
 	display: inline-block;
@@ -918,10 +1030,6 @@ h2.action-title {
 	color: #ffffff;
 }
 
-.action-btn {
-	padding: 11px 22px;
-}
-
 /* Популярные товары, Каталог */
 
 .catalog-list {
@@ -933,7 +1041,7 @@ h2.action-title {
 	position: relative;
 	width: 267px;
 	min-height: 322px;
-	margin-top: -17px;
+	margin-top: -16px;
 	margin-right: 26px;
 	margin-bottom: 0;
 	vertical-align: top;
@@ -1007,6 +1115,7 @@ h2.product-title {
 	margin: 0;
 	margin-top: 14px;
 	margin-bottom: 9px;
+	padding-left: 5px;
 	width: 258px;
 	font-size: 16px;
 	line-height: 22px;
@@ -1027,7 +1136,7 @@ h2.product-title {
 	text-align: center;
 }
 
-/* Популярные товары, Каталог - Изменение фона при наведении */
+/* Изменение фона при наведении */
 
 .product-wrap:hover .product-title a {
 	border-bottom-color: transparent;
@@ -1206,9 +1315,12 @@ h2.news-left-title {
 }
 
 .subscription-form input {
+	display: inline-block;
+	vertical-align: middle;
 	width: 368px;
+	height: 44px;
 	margin: 0;
-	margin-right: 10px;
+	margin-right: 8px;
 	padding: 9px 13px;
 	font: normal 16px/24px "Roboto", "Arial", "Helvetica", sans-serif;
 	color: #323232;
@@ -1230,22 +1342,39 @@ h2.news-left-title {
 	color: #5b9ddf;
 }
 
-.subscription-btn {
-	padding: 10px 10px;
-	width: 127px;
-}
-
 .subscription-form input:focus + label {
 	display: block;
 }
 
 /* Стили для placeholder */
 
-.subscription-form input::-webkit-input-placeholder {font: normal 16px/18px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
-.subscription-form input::-moz-placeholder {font: normal 16px/18px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
-.subscription-form input:-moz-placeholder {font: normal 16px/18px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
-.subscription-form input:-ms-input-placeholder {font: normal 16px/18px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
+.subscription-form input::-webkit-input-placeholder {
+	font: normal 16px/18px "Roboto", "Arial", "Helvetica",
+	sans-serif;
+	color: #999999;
+	opacity: 1
+}
 
+.subscription-form input::-moz-placeholder {
+	font: normal 16px/18px "Roboto", "Arial", "Helvetica",
+	sans-serif;
+	color: #999999;
+	opacity: 1
+}
+
+.subscription-form input:-moz-placeholder {
+	font: normal 16px/18px "Roboto", "Arial", "Helvetica",
+	sans-serif;
+	color: #999999;
+	opacity: 1
+}
+
+.subscription-form input:-ms-input-placeholder {
+	font: normal 16px/18px "Roboto", "Arial", "Helvetica",
+	sans-serif;
+	color: #999999;
+	opacity: 1
+}
 
 .subscription-form input:hover {
 	border-color: #999999;
@@ -1257,12 +1386,23 @@ h2.news-left-title {
 	box-shadow: inset 0 0 0 1px #2e88e4;
 }
 
-/* Стили для placeholder при фокусе */
+/* Стили для placeholder в фокусе */
 
-.subscription-form input:focus::-webkit-input-placeholder {opacity: 0;}
-.subscription-form input:focus::-moz-placeholder {opacity: 0;}
-.subscription-form input:focus:-moz-placeholder {opacity: 0;}
-.subscription-form input:focus:-ms-input-placeholder {opacity: 0;}
+.subscription-form input:focus::-webkit-input-placeholder {
+	opacity: 0;
+}
+
+.subscription-form input:focus::-moz-placeholder {
+	opacity: 0;
+}
+
+.subscription-form input:focus:-moz-placeholder {
+	opacity: 0;
+}
+
+.subscription-form input:focus:-ms-input-placeholder {
+	opacity: 0;
+}
 
 /* Карта */
 
@@ -1359,10 +1499,15 @@ h2.feedback-title {
 	color: #323232;
 }
 
-.feedback-input {
-	width: 265px;
+.feedback-input-wrap {
+	position: relative;
 	margin: 0;
 	margin-bottom: 20px;
+}
+
+.feedback-input {
+	width: 265px;
+	height: 44px;
 	padding: 9px 13px;
 	font: bold 16px/24px "Roboto", "Arial", "Helvetica", sans-serif;
 	text-align: left;
@@ -1372,6 +1517,21 @@ h2.feedback-title {
 	background-color: #ffffff;
 	box-sizing: border-box;
 	outline: none;
+}
+
+.feedback-form label {
+	display: none;
+	position: absolute;
+	top: -15px;
+	left: 15px;
+	font-size: 11px;
+	line-height: 13px;
+	font-weight: normal;
+	color: #5b9ddf;
+}
+
+.feedback-form .feedback-input:focus + label {
+	display: block;
 }
 
 .feedback-data {
@@ -1390,11 +1550,33 @@ h2.feedback-title {
 
 /* Стили для placeholder */
 
-.feedback-input::-webkit-input-placeholder {font: normal 16px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
-.feedback-input::-moz-placeholder {font: normal 16px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
-.feedback-input:-moz-placeholder {font: normal 16px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
-.feedback-input:-ms-input-placeholder {font: normal 16px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
+.feedback-input::-webkit-input-placeholder {
+	font: normal 16px/24px "Roboto", "Arial", "Helvetica",
+	sans-serif;
+	color: #999999;
+	opacity: 1
+}
 
+.feedback-input::-moz-placeholder {
+	font: normal 16px/24px "Roboto", "Arial", "Helvetica",
+	sans-serif;
+	color: #999999;
+	opacity: 1
+}
+
+.feedback-input:-moz-placeholder {
+	font: normal 16px/24px "Roboto", "Arial", "Helvetica",
+	sans-serif;
+	color: #999999;
+	opacity: 1
+}
+
+.feedback-input:-ms-input-placeholder {
+	font: normal 16px/24px "Roboto", "Arial", "Helvetica",
+	sans-serif;
+	color: #999999;
+	opacity: 1
+}
 
 .feedback-input:hover {
 	border-color: #999999;
@@ -1410,8 +1592,22 @@ h2.feedback-title {
 	display: block;
 }
 
-.feedback-btn {
-	display: block;
+/* Стили для placeholder в фокусе */
+
+.feedback-wrap .feedback-input:focus::-webkit-input-placeholder {
+	opacity: 0;
+}
+
+.feedback-wrap .feedback-input:focus::-moz-placeholder {
+	opacity: 0;
+}
+
+.feedback-wrap .feedback-input:focus:-moz-placeholder {
+	opacity: 0;
+}
+
+.feedback-wrap .feedback-input:focus:-ms-input-placeholder {
+	opacity: 0;
 }
 
 .feedback-overlay {
@@ -1424,7 +1620,7 @@ h2.feedback-title {
 	z-index: 5;
 }
 
-/* Кнопка закрыть */
+/* Кнопка "Закрыть" */
 
 .feedback-form-close {
 	position: absolute;
@@ -1467,14 +1663,14 @@ h2.feedback-title {
 	font-size: 0;
 }
 
-/* Подвал - Социальные сети */
+/* Социальные сети */
 
 .footer-social {
 	display: inline-block;
 	vertical-align: middle;
 	width: 267px;
 	margin-right: 26px;
-	margin-top: 5px;
+	margin-top: 8px;
 	font-size: 18px;
 }
 
@@ -1520,7 +1716,7 @@ h2.feedback-title {
 	background-position: -1013px -5px;
 }
 
-/* Подвал - Меню подвала */
+/* Меню подвала */
 
 .footer-navigation {
 	display: inline-block;
@@ -1571,7 +1767,6 @@ a.footer-navigation-fav {
 
 .footer-navigation-row {
 	display: table-row;
-	background: #849d8f;
 }
 
 .footer-navigation-cell {
@@ -1579,7 +1774,7 @@ a.footer-navigation-fav {
 	padding: 2px 15px;
 }
 
-/* Подвал - Копирайт */
+/* Копирайт */
 
 .footer-copyright {
 	display: inline-block;
@@ -1610,10 +1805,9 @@ a.footer-copyright-ref:active {
 
 .footer-copyright img {
 	margin-left: 80px;
-	background-color: #849d8f;
 }
 
-/* Стили только для catalog.html */
+/* Стили для catalog.html */
 
 .content-header {
 	margin-top: -20px;
@@ -1621,7 +1815,7 @@ a.footer-copyright-ref:active {
 
 h1.content-title {
 	margin: 0;
-	margin-bottom: 20px;
+	margin-bottom: 23px;
 	padding: 0;
 	font-size: 35px;
 	line-height: 41px;
@@ -1630,7 +1824,7 @@ h1.content-title {
 }
 
 .content-filter {
-	margin-bottom: 40px;
+	margin-bottom: 57px;
 }
 
 /* Хлебные крошки */
@@ -1663,10 +1857,7 @@ h1.content-title {
 }
 
 .breadcrumbs li:last-child::after {
-	position: absolute;
-	content: "";
-	top: 0;
-	right: 0;
+	display: none;
 }
 
 .breadcrumbs a {
@@ -1685,6 +1876,7 @@ h1.content-title {
 
 .content-filter form {
 	color: #ffffff;
+	font-size: 0;
 }
 
 .content-filter fieldset {
@@ -1693,6 +1885,7 @@ h1.content-title {
 	font-size: 0;
 	margin: 0;
 	margin-right: 14px;
+	margin-bottom: 16px;
 	padding: 0;
 	border: 0;
 	text-align: left;
@@ -1709,36 +1902,85 @@ h1.content-title {
 /* Сортировка */
 
 .sorting-wrap {
-	display: inline-block;
-	vertical-align: middle;
-	padding: 9px 16px;
 	color: #ffffff;
 	font-size: 16px;
 	line-height: 18px;
 	font-weight: 500;
-	background-color: rgba(255, 255, 255, 0.2);
 	border-radius: 20px;
+	overflow: hidden;
+	cursor: pointer;
 }
 
 .sorting-wrap:hover {
 	background-color: #ffffff;
 }
 
+.sorting-wrap select {
+	padding: 8px 12px;
+	width: 194px;
+	color: #ffffff;
+	background-color: rgba(255, 255, 255, 0.2);
+	border: none;
+}
+
 .sorting-wrap:hover select {
 	color: #323232;
 }
 
-.sorting-wrap select {
-	color: #ffffff;
-	background-color: transparent;
-	border: none;
-}
-
 .sorting-wrap option {
+	padding: 0;
 	font-size: 14px;
 	line-height: 16px;
 	font-weight: normal;
 	color: #323232;
+}
+
+/* Цена */
+
+.range-filter {
+	width: 220px;
+}
+
+.range-controls {
+	position: relative;
+	padding-top: 16px;
+	padding-right: 16px;
+	padding-left: 16px;
+	height: 20px;
+	border-radius: 20px;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.range-controls .scale {
+	height: 4px;
+	background-color: rgba(248, 247, 244, 0.5);
+}
+
+.range-controls .bar {
+	margin-left: 30px;
+	width: 98px;
+	height: 4px;
+	background-color: #f8f7f4;
+}
+
+.range-controls .toggle {
+	position: absolute;
+	top: 8px;
+	left: 0px;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	background-color: #f8f7f4;
+	border-radius: 50%;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
+}
+
+.range-controls .toggle-min {
+	left: 35px;
+}
+
+.range-controls .toggle-max {
+	left: 132px;
 }
 
 /* Жирность */
@@ -1746,17 +1988,19 @@ h1.content-title {
 .fat-wrap {
 	display: inline-block;
 	vertical-align: middle;
-	padding: 9px 16px;
+	padding: 8px 16px;
 	font-size: 0;
 	background-color: rgba(255, 255, 255, 0.2);
 	border-radius: 20px;
 }
 
 .fat-wrap input[type="radio"] {
-  display: none;
+	display: none;
 }
 
 .fat-wrap label {
+	display: inline-block;
+	vertical-align: middle;
 	position: relative;
 	cursor: pointer;
 	margin: 0;
@@ -1764,7 +2008,7 @@ h1.content-title {
 	padding-left: 30px;
 	margin-right: 20px;
 	font-size: 16px;
-	line-height: 18px;
+	line-height: 20px;
 	font-weight: 500;
 }
 
@@ -1779,6 +2023,7 @@ h1.content-title {
 	width: 20px;
 	height: 20px;
 	border: 1px solid #ffffff;
+	box-sizing: border-box;
 	border-radius: 50%;
 	background: transparent;
 }
@@ -1787,39 +2032,47 @@ h1.content-title {
 	box-shadow: inset 0 0 0 1px #ffffff;
 }
 
-.fat-wrap input[type="radio"]:checked + .radio-indicator {
+.fat-wrap input[type="radio"]:checked:hover + .radio-indicator {
 	box-shadow: inset 0 0 0 1px #ffffff;
 }
 
 .fat-wrap input[type="radio"]:checked + .radio-indicator::before {
 	position: absolute;
 	content: "";
-	top: 4px;
-	left: 4px;
+	top: 50%;
+	left: 50%;
+	margin: 0;
+	margin-top: -6px;
+	margin-left: -6px;
 	width: 12px;
 	height: 12px;
 	box-sizing: border-box;
-	border: 6px solid #ffffff;
 	border-radius: 50%;
-	background: transparent;
+	background-color: #ffffff;
 }
 
 /* Наполнители */
 
+fieldset.content-filter-filler {
+	margin-bottom: 0;
+}
+
 .filler-wrap {
 	display: inline-block;
 	vertical-align: middle;
-	padding: 9px 16px;
+	padding: 8px 16px;
 	font-size: 0;
 	background-color: rgba(255, 255, 255, 0.2);
 	border-radius: 20px;
 }
 
 .filler-wrap input[type="checkbox"] {
-  display: none;
+	display: none;
 }
 
 .filler-wrap label {
+	display: inline-block;
+	vertical-align: middle;
 	position: relative;
 	cursor: pointer;
 	margin: 0;
@@ -1827,12 +2080,12 @@ h1.content-title {
 	padding-left: 32px;
 	margin-right: 20px;
 	font-size: 16px;
-	line-height: 18px;
+	line-height: 20px;
 	font-weight: 500;
 }
 
 .filler-wrap label:last-child {
-	margin-right: 0;
+	margin-right: 7px;
 }
 
 .filler-wrap input[type="checkbox"] + .checkbox-indicator {
@@ -1847,12 +2100,15 @@ h1.content-title {
 }
 
 .filler-wrap input[type="checkbox"] + .checkbox-indicator:hover {
-	border-radius: 4px;
 	box-shadow: inset 0 0 0 2px #ffffff;
 }
 
 .filler-wrap input[type="checkbox"]:checked + .checkbox-indicator {
-	border-radius: 4px;
+	box-shadow: inset 0 0 0 1px #ffffff;
+	background: transparent url("../img/sprite/checkbox-on.png") no-repeat;
+}
+
+.filler-wrap input[type="checkbox"]:checked:hover + .checkbox-indicator {
 	box-shadow: inset 0 0 0 2px #ffffff;
 	background: transparent url("../img/sprite/checkbox-on.png") no-repeat;
 }
@@ -1867,9 +2123,10 @@ h1.content-title {
 	vertical-align: bottom;
 	text-align: center;
 	color: #ffffff;
-	background: rgba(255, 255, 255, 0.2);
+	background-color: rgba(255, 255, 255, 0.2);
 	border: 2px solid #ffffff;
 	border-radius: 20px;
+	box-sizing: border-box;
 	outline: none;
 	text-decoration: none;
 	cursor: pointer;
@@ -1881,9 +2138,10 @@ h1.content-title {
 }
 
 .content-filter-btn:active {
+	padding: 9px 14px;
 	color: #323232;
 	background-color: #ededed;
-	border-color: #ededed;
+	border: none;
 	box-shadow: inset 0 2px 2px #696969;
 }
 
@@ -1891,10 +2149,11 @@ h1.content-title {
 
 .pagination {
 	margin-top: 27px;
-	margin-bottom: 30px;
+	padding-bottom: 29px;
 	font-size: 0;
 	text-align: right;
 	white-space: nowrap;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .pagination a {

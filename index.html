@@ -53,7 +53,7 @@
 						<a class="search" href="#" title="Поиск">Поиск</a>
 						<div class="search-appearance">
 							<form class="search-form" name="search-form" action="#" method="get">
-								<input class="search-request" type="search" name="search-request" placeholder="Что ищем?">
+								<input class="search-request" type="search" name="search-request" id="search-request" placeholder="Что ищем?">
 								<label for="search-request">Что ищем?</label>
 							</form>
 						</div>
@@ -62,11 +62,15 @@
 						<a class="login" href="#" title="Вход">Вход</a>
 						<div class="login-appearance">
 							<form class="login-form" name="search-form" action="#" method="post">
-								<input class="login-email" type="email" name="login-email" placeholder="Электронная почта">
-								<label for="login-email">Электронная почта</label>
-								<input class="login-password" type="password" name="login-password" placeholder="Пароль">
-								<label for="login-password">Пароль</label>
-								<button class="btn login-btn" type="submit">Войти</button>
+								<div class="login-input-wrap">
+									<input class="login-email" type="email" name="login-email" id="login-email" placeholder="Электронная почта">
+									<label for="login-email">Электронная почта</label>
+								</div>
+								<div class="login-input-wrap">
+									<input class="login-password" type="password" name="login-password" id="login-password" placeholder="Пароль">
+									<label for="login-password">Пароль</label>
+								</div>
+								<button class="btn" type="submit">Войти</button>
 								<div class="login-forget-new">
 									<a href="#">Забыли пароль?</a>
 									<a href="#">Новая регистрация</a>
@@ -202,7 +206,7 @@
 				<div class="news-right">
 					<p class="news-right-text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
 					<form class="subscription-form" action="#" method="post">
-						<input class="subscription-email" type="email" name="subscription-email" placeholder="Электронная почта">
+						<input class="subscription-email" type="email" name="subscription-email" id="subscription-email" placeholder="Электронная почта">
 						<label for="subscription-email">Электронная почта</label>
 						<button class="btn subscription-btn" type="submit">Отправить</button>
 					</form>
@@ -230,9 +234,18 @@
 							<button class="feedback-form-close" type="button" title="Закрыть">Закрыть</button>
 							<h2 class="feedback-title">Мы обязательно вам ответим!</h2>
 							<fieldset class="feedback-data">
-								<input class="feedback-input feedback-name" type="text" name="feedback-name" placeholder="Как вас зовут?">
-								<input class="feedback-input feedback-email" type="email" name="feedback-email" placeholder="Ваша почта для ответа?">
-								<textarea class="feedback-input feedback-text" name="feedback-text" placeholder="Напишите что-нибудь..."></textarea>
+								<div class="feedback-input-wrap">
+									<input class="feedback-input feedback-name" type="text" name="feedback-name" id="feedback-name" placeholder="Как вас зовут?">
+									<label for="feedback-name">Как вас зовут?</label>
+								</div>
+								<div class="feedback-input-wrap">
+									<input class="feedback-input feedback-email" type="email" name="feedback-email" id="feedback-email" placeholder="Ваша почта для ответа?">
+									<label for="feedback-email">Ваша почта для ответа?</label>
+								</div>
+								<div class="feedback-input-wrap">
+									<textarea class="feedback-input feedback-text" name="feedback-text" id="feedback-text" placeholder="Напишите что-нибудь..."></textarea>
+									<label for="feedback-text">Напишите что-нибудь...</label>
+								</div>
 							</fieldset>
 							<button class="btn" type="submit">Отправить</button>
 						</form>
