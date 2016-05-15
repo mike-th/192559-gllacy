@@ -166,7 +166,7 @@ body > input[type="radio"] {
 	color: #ffffff;
 	background: #ef6441;
 	background: linear-gradient(to bottom, #f26843, #e74a35);
-	box-shadow: 0 1px 1px rgba(172, 16, 0, 0.64);
+	box-shadow: 0 1px 2px rgba(172, 16, 0, 0.54);
 	border: none;
 	border-radius: 46px;
 	outline: none;
@@ -176,7 +176,7 @@ body > input[type="radio"] {
 
 .btn:hover {
 	background: linear-gradient(to bottom, #f58669, #ec6f5e);
-	box-shadow: 0 1px 1px rgba(172, 16, 0, 1);
+	box-shadow: 0 1px 2px rgba(172, 16, 0, 1);
 }
 
 .btn:active {
@@ -192,16 +192,12 @@ body > input[type="radio"] {
 
 .main-header {
 	color: #ffffff;
-	/* Фон для сетки */
-	background-color: #2e8100;
 }
 
 .center {
 	width: 1146px;
 	margin: 0 auto;
 	padding: 0 27px;
-	/* Фон для сетки */
-	/*background-color: #db7093;*/
 }
 
 /* Шапка - Лого */
@@ -218,8 +214,6 @@ body > input[type="radio"] {
 	margin-top: 23px;
 	width: 700px;
 	float: left;
-	/* Фон для сетки */
-	background-color: #b0e0e6;
 }
 
 /* Шапка - Меню */
@@ -258,7 +252,8 @@ body > input[type="radio"] {
 }
 
 .main-navigation-item > a:active {
-	/* Сделать тень */
+	background-color: #f8f7f4;
+	box-shadow: inset 0 2px 2px #696969;
 }
 
 .main-navigation-item.active > a {
@@ -284,6 +279,7 @@ body > input[type="radio"] {
 	list-style: none;
 	background-color: #f8f7f4;
 	border-radius: 5px;
+	box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
 }
 
 .main-navigation-item:hover .main-navigation-submenu {
@@ -306,7 +302,7 @@ body > input[type="radio"] {
 .main-navigation-submenu > li:first-child > a {
 	font-weight: bold;
 	color: #323232;
-	border-bottom: 1px solid #323232;
+	border-bottom: 1px solid rgba(50, 50, 50, 0.2);
 }
 
 /* Шапка - Меню - Субменю - Изменение фона кнопки при наведении */
@@ -370,8 +366,6 @@ body > input[type="radio"] {
 	float: right;
 	text-align: right;
 	font-size: 0px;
-	/* Фон для сетки */
-	background-color: #708090;
 }
 
 /* Шапка - Личный кабинет - Поиск */
@@ -385,7 +379,6 @@ body > input[type="radio"] {
 	line-height: 16px;
 	margin-right: 10px;
 	text-align: left;
-	background-color: #849d8f;
 }
 
 a.search {
@@ -420,6 +413,7 @@ a.search {
 	padding: 0;
 	padding-top: 4px;
 	z-index: 5;
+	box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
 }
 
 .search-form {
@@ -459,10 +453,10 @@ a.search {
 
 /* Стили для placeholder */
 
-.search-form input::-webkit-input-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity:1}
-.search-form input::-moz-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity:1}
-.search-form input:-moz-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity:1}
-.search-form input:-ms-input-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity:1}
+.search-form input::-webkit-input-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
+.search-form input::-moz-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
+.search-form input:-moz-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
+.search-form input:-ms-input-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
 
 .search-form input:hover {
 	border-color: #999999;
@@ -473,6 +467,13 @@ a.search {
 	border-color: #2e88e4;
 	box-shadow: inset 0 0 0 1px #2e88e4;
 }
+
+/* Стили для placeholder при фокусе */
+
+.search-form input:focus::-webkit-input-placeholder {opacity: 0;}
+.search-form input:focus::-moz-placeholder {opacity: 0;}
+.search-form input:focus:-moz-placeholder {opacity: 0;}
+.search-form input:focus:-ms-input-placeholder {opacity: 0;}
 
 /* Шапка - Личный кабинет - Поиск - Изменение фона кнопки при наведении */
 
@@ -501,7 +502,6 @@ a.search {
 	line-height: 16px;
 	margin-right: 10px;
 	text-align: left;
-	background-color: #849d8f;
 }
 
 a.login {
@@ -539,6 +539,7 @@ a.login {
 	padding: 0;
 	padding-top: 4px;
 	z-index: 5;
+	box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
 }
 
 .login-form {
@@ -587,10 +588,10 @@ a.login {
 
 /* Стили для placeholder */
 
-.login-form input::-webkit-input-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity:1}
-.login-form input::-moz-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity:1}
-.login-form input:-moz-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity:1}
-.login-form input:-ms-input-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity:1}
+.login-form input::-webkit-input-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
+.login-form input::-moz-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
+.login-form input:-moz-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
+.login-form input:-ms-input-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
 
 
 .login-form input:hover {
@@ -602,6 +603,13 @@ a.login {
 	border-color: #2e88e4;
 	box-shadow: inset 0 0 0 1px #2e88e4;
 }
+
+/* Стили для placeholder при фокусе */
+
+.login-form input:focus::-webkit-input-placeholder {opacity: 0;}
+.login-form input:focus::-moz-placeholder {opacity: 0;}
+.login-form input:focus:-moz-placeholder {opacity: 0;}
+.login-form input:focus:-ms-input-placeholder {opacity: 0;}
 
 .login-forget-new {
 	display: inline-block;
@@ -655,7 +663,6 @@ a.login {
 	font-weight: 500;
 	line-height: 16px;
 	text-align: left;
-	background-color: #849d8f;
 }
 
 a.basket {
@@ -687,7 +694,6 @@ a.basket::before {
 
 a.basket-full {
 	color: #323232;
-	background-color: #f8f7f4;
 }
 
 a.basket-full::before {
@@ -695,7 +701,7 @@ a.basket-full::before {
 }
 
 .basket-appearance {
-	display: none;
+	display: block;
 	position: absolute;
 	top: 100%;
 	right: 0;
@@ -703,6 +709,7 @@ a.basket-full::before {
 	padding: 0;
 	padding-top: 4px;
 	z-index: 5;
+	box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
 }
 
 .basket-list {
@@ -720,6 +727,7 @@ a.basket-full::before {
 	padding: 0;
 	width: 100%;
 	text-align: left;
+
 	border-collapse: collapse;
 	border-bottom: 1px solid #333333;
 }
@@ -727,6 +735,8 @@ a.basket-full::before {
 .basket-table td {
 	border: 1px solid black;
 	padding: 0;
+	padding-right: 5px;
+	padding-bottom: 15px;
 	text-align: center;
 }
 
@@ -769,20 +779,16 @@ td.basket-cell-delete {
 }
 
 td.basket-cell-image {
-	width: 41px;
+	width: 35px;
 	padding: 0;
 }
 
 td.basket-cell-title {
-	padding-left: 8px;
-	padding-right: 8px;
-	width: 223px;
+	width: 235px;
 	text-align: left;
 }
 
 td.basket-cell-weight {
-	padding-left: 8px;
-	padding-right: 8px;
 	width: 105px;
 }
 
@@ -791,8 +797,6 @@ td.basket-cell-weight .basket-weight-price {
 }
 
 td.basket-cell-price {
-	padding-left: 8px;
-	padding-right: 8px;
 	width: 69px;
 }
 
@@ -839,8 +843,6 @@ td.basket-cell-price {
 	font-size: 14px;
 	font-weight: bold;
 	line-height: 16px;
-	/* Фон для сетки */
-	background-color: green;
 }
 
 .main-phone-number {
@@ -850,8 +852,6 @@ td.basket-cell-price {
 	font-size: 22px;
 	font-weight: 900;
 	line-height: 24px;
-	/* Фон для сетки */
-	background-color: orange;
 }
 
 /* Акции */
@@ -870,7 +870,6 @@ td.basket-cell-price {
 	text-align: right;
 	font-weight: bold;
 	overflow: hidden;
-	/* Фон для сетки */
 	background: #75061e url("../img/background-raspberry.png") no-repeat center center;
 	border-radius: 15px;
 }
@@ -884,7 +883,6 @@ td.basket-cell-price {
 	text-align: right;
 	font-weight: bold;
 	overflow: hidden;
-	/* Фон для сетки */
 	background: #593727 url("../img/background-chocolate.png") no-repeat center center;
 	border-radius: 15px;
 }
@@ -966,6 +964,7 @@ h2.action-title {
 	font-size: 45px;
 	font-weight: bold;
 	line-height: 45px;
+	text-shadow: 1px 1px 2px rgba(49, 50, 53, 0.5);
 	color: #ffffff;
 }
 
@@ -1035,6 +1034,7 @@ h2.product-title {
 	height: 405px;
 	background-color: rgba(255, 255, 255, 0.3);
 	border-radius: 5px;
+	box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
 	z-index: -1;
 }
 
@@ -1161,7 +1161,6 @@ h2.news-left-title {
 .news-right-pattern {
 	width: 560px;
 	float: right;
-	/* Фон для сетки */
 	background: #92cdff url("../img/post-card.png");
 	border-radius: 15px;
 }
@@ -1220,10 +1219,10 @@ h2.news-left-title {
 
 /* Стили для placeholder */
 
-.subscription-form input::-webkit-input-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity:1}
-.subscription-form input::-moz-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity:1}
-.subscription-form input:-moz-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity:1}
-.subscription-form input:-ms-input-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity:1}
+.subscription-form input::-webkit-input-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
+.subscription-form input::-moz-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
+.subscription-form input:-moz-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
+.subscription-form input:-ms-input-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
 
 
 .subscription-form input:hover {
@@ -1236,12 +1235,18 @@ h2.news-left-title {
 	box-shadow: inset 0 0 0 1px #2e88e4;
 }
 
+/* Стили для placeholder при фокусе */
+
+.subscription-form input:focus::-webkit-input-placeholder {opacity: 0;}
+.subscription-form input:focus::-moz-placeholder {opacity: 0;}
+.subscription-form input:focus:-moz-placeholder {opacity: 0;}
+.subscription-form input:focus:-ms-input-placeholder {opacity: 0;}
+
 /* Карта */
 
 .map {
 	padding-top: 62px;
 	padding-bottom: 62px;
-	/* Фон для сетки */
 	background: transparent url("../img/map.png") no-repeat center center;
 }
 
@@ -1268,8 +1273,6 @@ h2.news-left-title {
 	font-weight: normal;
 	line-height: 20px;
 	color: #323232;
-
-	background-color: #f8f7f4;
 }
 
 strong.map-contact-address {
@@ -1363,18 +1366,12 @@ h2.feedback-title {
 	overflow: auto;
 }
 
-/*.feedback-form input.feedback-text::-webkit-input-placeholder {}
-.feedback-form input.feedback-text::-moz-placeholder {}
-.feedback-form input.feedback-text:-moz-placeholder {}
-.feedback-form input.feedback-text:-ms-input-placeholder {}
-*/
-
 /* Стили для placeholder */
 
-.feedback-input::-webkit-input-placeholder {font: normal 16px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity:1}
-.feedback-input::-moz-placeholder {font: normal 16px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity:1}
-.feedback-input:-moz-placeholder {font: normal 16px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity:1}
-.feedback-input:-ms-input-placeholder {font: normal 16px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity:1}
+.feedback-input::-webkit-input-placeholder {font: normal 16px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
+.feedback-input::-moz-placeholder {font: normal 16px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
+.feedback-input:-moz-placeholder {font: normal 16px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
+.feedback-input:-ms-input-placeholder {font: normal 16px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
 
 
 .feedback-input:hover {
@@ -1476,7 +1473,9 @@ h2.feedback-title {
 .social-btn:active {
 	opacity: 1;
 	border-color: rgba(255, 255, 255, 0.7);
-	box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.7);
+	box-shadow:
+		0 0 0 1px rgba(255, 255, 255, 0.7),
+		inset 0 2px 2px #888888;
 }
 
 .social-btn-tw {
@@ -1590,6 +1589,10 @@ a.footer-copyright-ref:active {
 
 /* Стили только для catalog.html */
 
+.content-header {
+	margin-top: -20px;
+}
+
 h1.content-title {
 	margin: 0;
 	margin-bottom: 20px;
@@ -1608,10 +1611,6 @@ h1.content-title {
 
 .breadcrumbs {
 	margin: 0;
-	font-size: 14px;
-	line-height: 16px;
-	font-weight: normal;
-	text-decoration: none;
 }
 
 .breadcrumbs ul {
@@ -1621,11 +1620,31 @@ h1.content-title {
 }
 
 .breadcrumbs li {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 18px;
 	position: relative;
-	display: inline;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: normal;
+}
+
+.breadcrumbs li::after {
+	position: absolute;
+	content: "»";
+	top: 0;
+	right: -13px;
+}
+
+.breadcrumbs li:last-child::after {
+	position: absolute;
+	content: "";
+	top: 0;
+	right: 0;
 }
 
 .breadcrumbs a {
+	display: block;
 	color: #ffffff;
 	text-decoration: none;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -1639,32 +1658,188 @@ h1.content-title {
 /* Фильтры */
 
 .content-filter form {
-	display: inline-block;
-	vertical-align: middle;
-	font-size: 14px;
-	line-height: 16px;
-	font-weight: normal;
 	color: #ffffff;
 }
 
 .content-filter fieldset {
+	display: inline-block;
+	vertical-align: bottom;
+	font-size: 0;
 	margin: 0;
+	margin-right: 14px;
 	padding: 0;
 	border: 0;
 	text-align: left;
 }
 
-.content-filter-sorting {
-	width: 193px;
-}
-
 .content-filter legend {
 	margin-left: 15px;
 	padding-bottom: 5px;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 500;
 }
 
+/* Сортировка */
 
+.sorting-wrap {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 9px 16px;
+	font-size: 0;
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 20px;
+}
 
+.sorting-wrap option {
+
+}
+
+/* Жирность */
+
+.fat-wrap {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 9px 16px;
+	font-size: 0;
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 20px;
+}
+
+.fat-wrap input[type="radio"] {
+  display: none;
+}
+
+.fat-wrap label {
+	position: relative;
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+	padding-left: 30px;
+	margin-right: 20px;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 500;
+}
+
+.fat-wrap label:last-child {
+	margin-right: 0;
+}
+
+.fat-wrap input[type="radio"] + .radio-indicator {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #ffffff;
+	border-radius: 50%;
+	background: transparent;
+}
+
+.fat-wrap input[type="radio"] + .radio-indicator:hover {
+	box-shadow: inset 0 0 0 1px #ffffff;
+}
+
+.fat-wrap input[type="radio"]:checked + .radio-indicator {
+	box-shadow: inset 0 0 0 1px #ffffff;
+}
+
+.fat-wrap input[type="radio"]:checked + .radio-indicator::before {
+	position: absolute;
+	content: "";
+	top: 4px;
+	left: 4px;
+	width: 12px;
+	height: 12px;
+	box-sizing: border-box;
+	border: 6px solid #ffffff;
+	border-radius: 50%;
+	background: transparent;
+}
+
+/* Наполнители */
+
+.filler-wrap {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 9px 16px;
+	font-size: 0;
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 20px;
+}
+
+.filler-wrap input[type="checkbox"] {
+  display: none;
+}
+
+.filler-wrap label {
+	position: relative;
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+	padding-left: 32px;
+	margin-right: 20px;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 500;
+}
+
+.filler-wrap label:last-child {
+	margin-right: 0;
+}
+
+.filler-wrap input[type="checkbox"] + .checkbox-indicator {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	border-radius: 4px;
+	background: transparent url("../img/sprite/checkbox-off.png") no-repeat;
+	box-shadow: inset 0 0 0 1px #ffffff;
+}
+
+.filler-wrap input[type="checkbox"] + .checkbox-indicator:hover {
+	border-radius: 4px;
+	box-shadow: inset 0 0 0 2px #ffffff;
+}
+
+.filler-wrap input[type="checkbox"]:checked + .checkbox-indicator {
+	border-radius: 4px;
+	box-shadow: inset 0 0 0 2px #ffffff;
+	background: transparent url("../img/sprite/checkbox-on.png") no-repeat;
+}
+
+/* Кнопка "Применить" */
+
+.content-filter-btn {
+	display: inline-block;
+	padding: 7px 14px;
+	width: 144px;
+	font: 500 16px/18px "Roboto", "Arial", "Helvetica", sans-serif;
+	vertical-align: bottom;
+	text-align: center;
+	color: #ffffff;
+	background: rgba(255, 255, 255, 0.2);
+	border: 2px solid #ffffff;
+	border-radius: 20px;
+	outline: none;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.content-filter-btn:hover {
+	color: #323232;
+	background-color: #ffffff;
+}
+
+.content-filter-btn:active {
+	color: #323232;
+	background-color: #ededed;
+	border-color: #ededed;
+	box-shadow: inset 0 2px 2px #696969;
+}
 
 /* Страницы каталога */
 

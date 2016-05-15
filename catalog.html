@@ -120,13 +120,15 @@
 				<form action="#" method="get">
 					<!-- Сортировка -->
 					<fieldset class="content-filter-sorting">
-						<legend>Сортировка:</legend>
-						<select name="sorting">
-							<option value="popular">по популярности</option>
-							<option value="cheap">сначала недорогие</option>
-							<option value="expensive">сначала дорогие</option>
-							<option value="fat">по жирности</option>
-						</select>
+						<div class="sorting-wrap">
+							<legend>Сортировка:</legend>
+							<select name="sorting">
+								<option value="popular">по популярности</option>
+								<option value="cheap">сначала недорогие</option>
+								<option value="expensive">сначала дорогие</option>
+								<option value="fat">по жирности</option>
+							</select>
+						</div>
 					</fieldset>
 					<!-- Цена -->
 					<fieldset class="content-filter-price">
@@ -151,40 +153,50 @@
 					</fieldset>
 					<!-- Жирность -->
 					<fieldset class="content-filter-fat">
-						<legend>Жирность:</legend>
+							<legend>Жирность:</legend>
+							<div class="fat-wrap">
+								<label for="percent-0">
+								<input type="radio" name="filter-fat" value="percent-0" id="percent-0">
+								<span class="radio-indicator"></span>0%</label>
 
-						<input type="radio" name="filter-fat" value="percent-0" id="percent-0">
-						<label for="percent-0">0%</label>
+								<label for="percent-to-10">
+								<input type="radio" name="filter-fat" value="percent-to-10" id="percent-to-10" checked>
+								<span class="radio-indicator"></span>до 10%</label>
 
-						<input type="radio" name="filter-fat" value="percent-to-10" id="percent-to-10" checked>
-						<label for="percent-to-10">до 10%</label>
+								<label for="percent-to-30">
+								<input type="radio" name="filter-fat" value="percent-to-30" id="percent-to-30">
+								<span class="radio-indicator"></span>до 30%</label>
 
-						<input type="radio" name="filter-fat" value="percent-to-30" id="percent-to-30">
-						<label for="percent-to-30">до 30%</label>
-
-						<input type="radio" name="filter-fat" value="percent-more-30" id="percent-more-30">
-						<label for="percent-more-30">выше 30%</label>
-
+								<label for="percent-more-30">
+								<input type="radio" name="filter-fat" value="percent-more-30" id="percent-more-30">
+								<span class="radio-indicator"></span>выше 30%</label>
+						</div>
 					</fieldset>
 					<!-- Наполнители -->
 					<fieldset class="content-filter-filler">
 						<legend>Наполнители:</legend>
+						<div class="filler-wrap">
+							<label for="chocolate">
+								<input type="checkbox" name="chocolate" id="chocolate" checked>
+								<span class="checkbox-indicator"></span>шоколадные</label>
 
-						<input type="checkbox" name="chocolate" id="chocolate" checked>
-						<label for="chocolate">шоколадные</label>
+							<label for="sugar">
+								<input type="checkbox" name="sugar" id="sugar" checked>
+								<span class="checkbox-indicator"></span>сахарные присыпки
+							</label>
 
-						<input type="checkbox" name="sugar" id="sugar" checked>
-						<label for="sugar">сахарные присыпки</label>
+							<label for="fruit">
+								<input type="checkbox" name="fruit" id="fruit">
+								<span class="checkbox-indicator"></span>фрукты</label>
 
-						<input type="checkbox" name="fruit" id="fruit">
-						<label for="fruit">фрукты</label>
+							<label for="syrup">
+								<input type="checkbox" name="syrup" id="syrup">
+								<span class="checkbox-indicator"></span>сиропы</label>
 
-						<input type="checkbox" name="syrup" id="syrup">
-						<label for="syrup">сиропы</label>
-
-						<input type="checkbox" name="jam" id="jam">
-						<label for="jam">джемы</label>
-
+							<label for="jam">
+								<input type="checkbox" name="jam" id="jam">
+								<span class="checkbox-indicator"></span>джемы</label>
+						</div>
 					</fieldset>
 					<button class="content-filter-btn" type="submit">Применить</button>
 				</form>
@@ -316,7 +328,7 @@
 				</div>
 				<!-- Страницы каталога -->
 				<div class="pagination">
-					<a class="page-prev" href="#">Предыдущая страница</a>
+					<a class="page-prev">Предыдущая страница</a>
 					<a class="current">1</a>
 					<a href="#">2</a>
 					<a href="#">3</a>
