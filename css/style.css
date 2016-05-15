@@ -184,10 +184,6 @@ body > input[type="radio"] {
 	box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 
-.feedback-btn {
-	display: block;
-}
-
 /* Шапка */
 
 .main-header {
@@ -242,6 +238,17 @@ body > input[type="radio"] {
 	color: #ffffff;
 	font-size: 16px;
 	font-weight: bold;
+	text-decoration: none;
+}
+
+.main-navigation-item > a:after {
+	content: "";
+	position: absolute;
+	bottom: 6px;
+	left: 14px;
+	right: 14px;
+	height: 1px;
+	background-color: rgba(255, 255, 255, 0.2);
 }
 
 .main-navigation-item > a:hover {
@@ -653,6 +660,11 @@ a.login {
 	z-index: 10;
 }
 
+.login-btn {
+	padding: 10px 10px;
+	width: 100px;
+}
+
 /* Шапка - Личный кабинет - Корзина */
 
 .basket-wrap {
@@ -904,6 +916,10 @@ h2.action-title {
 	line-height: 22px;
 	text-align: left;
 	color: #ffffff;
+}
+
+.action-btn {
+	padding: 11px 22px;
 }
 
 /* Популярные товары, Каталог */
@@ -1177,7 +1193,7 @@ h2.news-left-title {
 .news-right p {
 	margin: 0;
 	margin-bottom: 20px;
-	min-height: 97px;
+	min-height: 81px;
 	font-size: 16px;
 	font-weight: normal;
 	line-height: 22px;
@@ -1186,6 +1202,7 @@ h2.news-left-title {
 
 .subscription-form {
 	position: relative;
+	margin-bottom: 15px;
 }
 
 .subscription-form input {
@@ -1213,16 +1230,21 @@ h2.news-left-title {
 	color: #5b9ddf;
 }
 
+.subscription-btn {
+	padding: 10px 10px;
+	width: 127px;
+}
+
 .subscription-form input:focus + label {
 	display: block;
 }
 
 /* Стили для placeholder */
 
-.subscription-form input::-webkit-input-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
-.subscription-form input::-moz-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
-.subscription-form input:-moz-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
-.subscription-form input:-ms-input-placeholder {font: normal 14px/24px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
+.subscription-form input::-webkit-input-placeholder {font: normal 16px/18px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
+.subscription-form input::-moz-placeholder {font: normal 16px/18px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
+.subscription-form input:-moz-placeholder {font: normal 16px/18px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
+.subscription-form input:-ms-input-placeholder {font: normal 16px/18px "Roboto", "Arial", "Helvetica", sans-serif; color: #999999; opacity: 1}
 
 
 .subscription-form input:hover {
@@ -1385,6 +1407,10 @@ h2.feedback-title {
 }
 
 .feedback-wrap:hover .feedback-appearance {
+	display: block;
+}
+
+.feedback-btn {
 	display: block;
 }
 
