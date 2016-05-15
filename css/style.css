@@ -1686,13 +1686,33 @@ h1.content-title {
 	display: inline-block;
 	vertical-align: middle;
 	padding: 9px 16px;
-	font-size: 0;
+	color: #ffffff;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 500;
 	background-color: rgba(255, 255, 255, 0.2);
 	border-radius: 20px;
 }
 
-.sorting-wrap option {
+.sorting-wrap:hover {
+	background-color: #ffffff;
+}
 
+.sorting-wrap:hover select {
+	color: #323232;
+}
+
+.sorting-wrap select {
+	color: #ffffff;
+	background-color: transparent;
+	border: none;
+}
+
+.sorting-wrap option {
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: normal;
+	color: #323232;
 }
 
 /* Жирность */
