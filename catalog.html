@@ -13,7 +13,7 @@
 		<div class="center clearfix">
 			<!-- Лого и главное меню -->
 			<div class="main-logo">
-				<a href="index.html"><img src="img/main-logo.svg" alt="GllacyShop" width="153" height="63"></a>
+				<a href="index.html"><img src="img/main-logo.svg" width="153" height="63" alt="GllacyShop"></a>
 			</div>
 			<nav class="main-navigation">
 				<ul class="main-navigation-menu">
@@ -45,7 +45,7 @@
 						<a class="search" href="#" title="Поиск">Поиск</a>
 						<div class="search-appearance">
 							<form class="search-form" name="search-form" action="#" method="get">
-								<input class="search-request" type="search" name="search-request" placeholder="Что ищем?">
+								<input class="search-request" type="search" name="search-request" id="search-request" placeholder="Что ищем?">
 								<label for="search-request">Что ищем?</label>
 							</form>
 						</div>
@@ -54,10 +54,14 @@
 						<a class="login" href="#" title="Вход">Вход</a>
 						<div class="login-appearance">
 							<form class="login-form" name="search-form" action="#" method="post">
-								<input class="login-email" type="email" name="login-email" placeholder="Электронная почта">
-								<label for="login-email">Электронная почта</label>
-								<input class="login-password" type="password" name="login-password" placeholder="Пароль">
-								<label for="login-password">Пароль</label>
+								<div class="login-input-wrap">
+									<input class="login-email" type="email" name="login-email" id="login-email" placeholder="Электронная почта">
+									<label for="login-email">Электронная почта</label>
+								</div>
+								<div class="login-input-wrap">
+									<input class="login-password" type="password" name="login-password" id="login-password" placeholder="Пароль">
+									<label for="login-password">Пароль</label>
+								</div>
 								<button class="btn" type="submit">Войти</button>
 								<div class="login-forget-new">
 									<a href="#">Забыли пароль?</a>
@@ -87,7 +91,7 @@
 									</tr>
 								</table>
 								<p class="basket-result">Итого: 750 руб.</p>
-								<a class="btn" href="#">Оформить заказ</a>
+								<a class="btn basket-btn" href="#">Оформить заказ</a>
 							</div>
 						</div>
 					</div>
@@ -132,24 +136,16 @@
 					</fieldset>
 					<!-- Цена -->
 					<fieldset class="content-filter-price">
+						<legend>Цена: <span class="min-price">100</span> руб. – <span class="max-price">500</span> руб.</legend>
 						<div class="range-filter">
-							<div class="price-controls">
-							<legend>Цена:</legend>
-							<input type="text" name="min-price" value="100" id="price-from"> руб. –
-							<input type="text" name="max-price" value="500" id="price-to"> руб.
+							<div class="range-controls">
+								<div class="scale">
+									<div class="bar"></div>
+								</div>
+								<div class="toggle toggle-min"></div>
+								<div class="toggle toggle-max"></div>
 							</div>
 						</div>
-
-							<div class="range-filter">
-								<div class="range-controls">
-									<div class="scale">
-										<div class="bar"></div>
-									</div>
-									<div class="toggle toggle-min"></div>
-									<div class="toggle toggle-max"></div>
-								</div>
-
-						<!-- Ползунок (сделать) -->
 					</fieldset>
 					<!-- Жирность -->
 					<fieldset class="content-filter-fat">
