@@ -941,7 +941,7 @@ td.basket-cell-price {
 }
 
 .basket-wrap:hover .basket::before {
-	background: transparent url("../img/sprite/basket-hover.png") no-repeat;
+	background: transparent url("../img/basket-hover.png") no-repeat;
 }
 .basket-wrap:hover .basket-full::before {
 	background: transparent url("../img/main-sprite.png") no-repeat -36px -5px;
@@ -2095,7 +2095,7 @@ fieldset.content-filter-filler {
 	width: 20px;
 	height: 20px;
 	border-radius: 4px;
-	background: transparent url("../img/sprite/checkbox-off.png") no-repeat;
+	background: transparent url("../img/checkbox-off.png") no-repeat;
 	box-shadow: inset 0 0 0 1px #ffffff;
 }
 
@@ -2105,12 +2105,12 @@ fieldset.content-filter-filler {
 
 .filler-wrap input[type="checkbox"]:checked + .checkbox-indicator {
 	box-shadow: inset 0 0 0 1px #ffffff;
-	background: transparent url("../img/sprite/checkbox-on.png") no-repeat;
+	background: transparent url("../img/checkbox-on.png") no-repeat;
 }
 
 .filler-wrap input[type="checkbox"]:checked:hover + .checkbox-indicator {
 	box-shadow: inset 0 0 0 2px #ffffff;
-	background: transparent url("../img/sprite/checkbox-on.png") no-repeat;
+	background: transparent url("../img/checkbox-on.png") no-repeat;
 }
 
 /* Кнопка "Применить" */
