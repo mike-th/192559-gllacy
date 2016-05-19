@@ -4,8 +4,8 @@
 	<meta charset="utf-8">
 	<title>GllacyShop</title>
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-	<link href="css/normalize.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
+	<link href="css/normalize.min.css" rel="stylesheet">
+	<link href="css/style.min.css" rel="stylesheet">
 </head>
 <body>
 	<!-- Шапка -->
@@ -152,7 +152,7 @@
 							<legend>Жирность:</legend>
 							<div class="fat-wrap">
 								<label for="percent-0">
-								<input type="radio" name="filter-fat" value="percent-0" id="percent-0">
+								<input type="radio" name="filter-fat" value="percent-0" id="percent-0" disabled>
 								<span class="radio-indicator"></span>0%</label>
 
 								<label for="percent-to-10">
@@ -164,7 +164,7 @@
 								<span class="radio-indicator"></span>до 30%</label>
 
 								<label for="percent-more-30">
-								<input type="radio" name="filter-fat" value="percent-more-30" id="percent-more-30">
+								<input type="radio" name="filter-fat" value="percent-more-30" id="percent-more-30" disabled>
 								<span class="radio-indicator"></span>выше 30%</label>
 						</div>
 					</fieldset>
@@ -178,15 +178,14 @@
 
 							<label for="sugar">
 								<input type="checkbox" name="sugar" id="sugar" checked>
-								<span class="checkbox-indicator"></span>сахарные присыпки
-							</label>
+								<span class="checkbox-indicator"></span>сахарные присыпки</label>
 
 							<label for="fruit">
-								<input type="checkbox" name="fruit" id="fruit">
+								<input type="checkbox" name="fruit" id="fruit" disabled>
 								<span class="checkbox-indicator"></span>фрукты</label>
 
 							<label for="syrup">
-								<input type="checkbox" name="syrup" id="syrup">
+								<input type="checkbox" name="syrup" id="syrup" checked disabled>
 								<span class="checkbox-indicator"></span>сиропы</label>
 
 							<label for="jam">
