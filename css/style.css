@@ -2032,6 +2032,14 @@ h1.content-title {
 	box-shadow: inset 0 0 0 1px #ffffff;
 }
 
+.fat-wrap input[type="radio"]:disabled + .radio-indicator {
+	opacity: 0.4;
+}
+
+.fat-wrap input[type="radio"]:disabled + .radio-indicator:hover {
+	box-shadow: none;
+}
+
 .fat-wrap input[type="radio"]:checked:hover + .radio-indicator {
 	box-shadow: inset 0 0 0 1px #ffffff;
 }
@@ -2103,6 +2111,14 @@ fieldset.content-filter-filler {
 	box-shadow: inset 0 0 0 2px #ffffff;
 }
 
+.filler-wrap input[type="checkbox"]:disabled + .checkbox-indicator {
+	opacity: 0.4;
+}
+
+.filler-wrap input[type="checkbox"]:disabled + .checkbox-indicator:hover {
+	box-shadow: inset 0 0 0 1px #ffffff;
+}
+
 .filler-wrap input[type="checkbox"]:checked + .checkbox-indicator {
 	box-shadow: inset 0 0 0 1px #ffffff;
 	background: transparent url("../img/checkbox-on.png") no-repeat;
@@ -2111,6 +2127,10 @@ fieldset.content-filter-filler {
 .filler-wrap input[type="checkbox"]:checked:hover + .checkbox-indicator {
 	box-shadow: inset 0 0 0 2px #ffffff;
 	background: transparent url("../img/checkbox-on.png") no-repeat;
+}
+
+.filler-wrap input[type="checkbox"]:checked:disabled:hover + .checkbox-indicator {
+	box-shadow: inset 0 0 0 1px #ffffff;
 }
 
 /* Кнопка "Применить" */
